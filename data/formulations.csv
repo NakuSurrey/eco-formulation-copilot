@@ -1,0 +1,501 @@
+Formula_ID,Surfactant_Type,Polymer_Type,Enzyme_Type,Concentration_Pct,Biodegradability_Score,Cleaning_Efficacy_Score,Toxicity_Level,Cost_Per_Litre_GBP
+ECO-F-0001,Alcohol Ethoxylate,Carboxymethyl Cellulose,No Enzyme,9.1,96,44,6.32,0.55
+ECO-F-0002,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,Amylase,25.2,84,41,0.32,3.3
+ECO-F-0003,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Protease,35.4,40,83,1.44,1.33
+ECO-F-0004,Alcohol Ethoxylate,Polyvinylpyrrolidone,Protease,8.7,69,73,0.91,1.59
+ECO-F-0005,Cocamidopropyl Betaine,Polyacrylic Acid,Mannanase,10.0,59,63,7.85,3.94
+ECO-F-0006,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Mannanase,12.7,25,67,0.68,4.04
+ECO-F-0007,Alcohol Ethoxylate,Polyethylene Glycol,Cellulase,16.1,99,59,5.44,5.29
+ECO-F-0008,Alcohol Ethoxylate,Chitosan Derivative,Lipase,33.1,61,50,5.84,2.0
+ECO-F-0009,Alcohol Ethoxylate,Carboxymethyl Cellulose,Cellulase,20.2,24,51,8.41,2.73
+ECO-F-0010,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,Protease,37.2,96,58,3.47,4.6
+ECO-F-0011,Sodium Lauryl Sulfate,Chitosan Derivative,Lipase,13.5,23,57,4.29,4.41
+ECO-F-0012,Cocamidopropyl Betaine,Modified Starch,Mannanase,15.5,97,88,5.01,1.13
+ECO-F-0013,Alcohol Ethoxylate,Modified Starch,Cellulase,8.6,89,81,0.5,2.74
+ECO-F-0014,Cocamidopropyl Betaine,Polyacrylic Acid,Mannanase,7.5,29,49,3.31,3.14
+ECO-F-0015,Sodium Lauryl Sulfate,Polyethylene Glycol,No Enzyme,33.8,74,97,5.83,1.47
+ECO-F-0016,Methyl Ester Sulfonate,Polyacrylic Acid,Amylase,23.1,83,64,8.11,4.53
+ECO-F-0017,Sodium Lauryl Sulfate,Polyethylene Glycol,No Enzyme,16.9,48,94,5.47,3.74
+ECO-F-0018,Sodium Lauryl Sulfate,Modified Starch,Protease,29.0,92,55,4.2,1.37
+ECO-F-0019,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Protease,14.6,29,76,4.87,4.26
+ECO-F-0020,Linear Alkylbenzene Sulfonate,Modified Starch,Amylase,10.1,25,40,4.09,3.61
+ECO-F-0021,Alkyl Polyglucoside,Carboxymethyl Cellulose,Mannanase,35.2,85,51,5.89,2.08
+ECO-F-0022,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Cellulase,41.0,54,81,3.89,4.78
+ECO-F-0023,Linear Alkylbenzene Sulfonate,Modified Starch,Mannanase,14.2,46,58,1.95,0.63
+ECO-F-0024,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Protease,25.6,24,37,2.44,1.37
+ECO-F-0025,Cocamidopropyl Betaine,Modified Starch,Mannanase,23.9,77,57,6.69,2.75
+ECO-F-0026,Cocamidopropyl Betaine,Polyacrylic Acid,Lipase,21.9,67,54,4.02,0.77
+ECO-F-0027,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Protease,14.9,21,42,1.7,0.62
+ECO-F-0028,Methyl Ester Sulfonate,Polyacrylic Acid,Amylase,40.0,72,47,0.73,2.23
+ECO-F-0029,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Amylase,11.7,85,42,4.18,0.81
+ECO-F-0030,Alcohol Ethoxylate,Polyacrylic Acid,Protease,44.4,42,81,2.33,4.37
+ECO-F-0031,Cocamidopropyl Betaine,Modified Starch,No Enzyme,33.7,73,66,1.4,2.23
+ECO-F-0032,Sodium Lauryl Sulfate,Chitosan Derivative,Mannanase,7.4,52,57,2.73,4.66
+ECO-F-0033,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Protease,43.4,21,91,0.77,2.59
+ECO-F-0034,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Cellulase,9.8,38,38,7.58,3.0
+ECO-F-0035,Alkyl Polyglucoside,Chitosan Derivative,Mannanase,27.6,46,35,2.76,3.11
+ECO-F-0036,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Lipase,20.8,48,56,5.74,3.33
+ECO-F-0037,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Cellulase,29.8,53,88,4.83,1.76
+ECO-F-0038,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Amylase,42.3,27,39,7.5,2.74
+ECO-F-0039,Alkyl Polyglucoside,Modified Starch,No Enzyme,17.1,46,77,8.36,1.62
+ECO-F-0040,Methyl Ester Sulfonate,Chitosan Derivative,Protease,42.6,98,97,1.23,0.52
+ECO-F-0041,Alcohol Ethoxylate,Polyvinylpyrrolidone,Lipase,29.2,29,43,6.13,3.65
+ECO-F-0042,Methyl Ester Sulfonate,Polyethylene Glycol,Protease,30.4,41,63,7.07,2.6
+ECO-F-0043,Alcohol Ethoxylate,Chitosan Derivative,Lipase,11.5,20,30,3.81,1.83
+ECO-F-0044,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Mannanase,6.4,69,31,3.2,0.85
+ECO-F-0045,Methyl Ester Sulfonate,Polyethylene Glycol,Lipase,13.4,85,48,2.2,2.52
+ECO-F-0046,Alkyl Polyglucoside,Modified Starch,No Enzyme,11.2,28,75,7.91,3.82
+ECO-F-0047,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,No Enzyme,42.0,35,52,6.67,4.27
+ECO-F-0048,Cocamidopropyl Betaine,Polyethylene Glycol,Cellulase,39.9,67,61,7.31,1.54
+ECO-F-0049,Alkyl Polyglucoside,Polyvinylpyrrolidone,Lipase,37.8,43,55,7.42,3.98
+ECO-F-0050,Alkyl Polyglucoside,Polyvinylpyrrolidone,Lipase,39.6,43,33,8.22,3.29
+ECO-F-0051,Alkyl Polyglucoside,Chitosan Derivative,Mannanase,18.2,50,74,0.33,3.2
+ECO-F-0052,Methyl Ester Sulfonate,Polyethylene Glycol,Protease,28.9,48,52,3.0,2.93
+ECO-F-0053,Sodium Lauryl Sulfate,Polyethylene Glycol,Cellulase,41.0,55,85,1.7,3.05
+ECO-F-0054,Sodium Lauryl Sulfate,Chitosan Derivative,No Enzyme,42.6,20,85,6.29,0.36
+ECO-F-0055,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Mannanase,17.6,40,76,7.22,2.27
+ECO-F-0056,Alkyl Polyglucoside,Polyvinylpyrrolidone,Cellulase,32.9,53,94,4.76,1.73
+ECO-F-0057,Alkyl Polyglucoside,Chitosan Derivative,No Enzyme,41.1,39,83,5.27,3.31
+ECO-F-0058,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Lipase,13.4,53,81,6.7,2.79
+ECO-F-0059,Alcohol Ethoxylate,Modified Starch,Cellulase,36.7,92,71,8.16,2.98
+ECO-F-0060,Cocamidopropyl Betaine,Chitosan Derivative,Mannanase,18.4,36,40,6.97,1.61
+ECO-F-0061,Alcohol Ethoxylate,Carboxymethyl Cellulose,Protease,6.8,45,69,8.37,1.35
+ECO-F-0062,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,32.9,93,39,4.25,3.25
+ECO-F-0063,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Cellulase,13.8,46,48,6.85,3.27
+ECO-F-0064,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Amylase,37.1,81,89,5.71,0.67
+ECO-F-0065,Sodium Lauryl Sulfate,Chitosan Derivative,Mannanase,22.1,86,70,7.72,6.26
+ECO-F-0066,Alkyl Polyglucoside,Polyacrylic Acid,Lipase,35.1,72,50,7.15,3.66
+ECO-F-0067,Alcohol Ethoxylate,Polyvinylpyrrolidone,Cellulase,8.1,50,96,2.5,2.51
+ECO-F-0068,Sodium Lauryl Sulfate,Polyethylene Glycol,Amylase,11.0,49,72,3.32,1.77
+ECO-F-0069,Alkyl Polyglucoside,Polyvinylpyrrolidone,Mannanase,23.6,34,57,0.62,0.64
+ECO-F-0070,Sodium Lauryl Sulfate,Chitosan Derivative,Protease,39.3,68,79,6.53,4.38
+ECO-F-0071,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Cellulase,39.1,63,91,8.11,0.38
+ECO-F-0072,Sodium Lauryl Sulfate,Modified Starch,Amylase,24.5,68,98,2.39,3.68
+ECO-F-0073,Cocamidopropyl Betaine,Chitosan Derivative,Cellulase,34.0,77,33,7.16,2.08
+ECO-F-0074,Alkyl Polyglucoside,Modified Starch,Mannanase,31.5,31,98,0.81,0.47
+ECO-F-0075,Alcohol Ethoxylate,Polyethylene Glycol,Lipase,20.2,69,47,1.88,4.21
+ECO-F-0076,Alkyl Polyglucoside,Polyvinylpyrrolidone,Cellulase,15.1,56,73,0.79,3.74
+ECO-F-0077,Methyl Ester Sulfonate,Carboxymethyl Cellulose,No Enzyme,7.7,17,36,8.14,4.8
+ECO-F-0078,Alcohol Ethoxylate,Polyethylene Glycol,Mannanase,11.1,20,33,1.16,4.58
+ECO-F-0079,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Amylase,29.2,29,57,8.2,2.42
+ECO-F-0080,Linear Alkylbenzene Sulfonate,Modified Starch,Protease,42.2,29,50,4.94,4.64
+ECO-F-0081,Alcohol Ethoxylate,Polyethylene Glycol,Mannanase,32.6,63,80,5.37,4.54
+ECO-F-0082,Sodium Lauryl Sulfate,Polyethylene Glycol,Mannanase,36.3,28,68,3.02,4.13
+ECO-F-0083,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Protease,39.0,69,77,7.01,0.66
+ECO-F-0084,Cocamidopropyl Betaine,Polyacrylic Acid,No Enzyme,11.1,28,85,1.58,4.63
+ECO-F-0085,Alkyl Polyglucoside,Polyacrylic Acid,Cellulase,38.0,81,64,5.08,4.25
+ECO-F-0086,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Cellulase,14.8,56,61,4.0,4.05
+ECO-F-0087,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Cellulase,13.5,93,78,6.8,2.31
+ECO-F-0088,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Mannanase,5.4,58,65,8.06,4.27
+ECO-F-0089,Alkyl Polyglucoside,Modified Starch,Amylase,32.6,25,60,5.53,3.55
+ECO-F-0090,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Amylase,21.2,77,87,2.14,3.88
+ECO-F-0091,Alkyl Polyglucoside,Chitosan Derivative,Mannanase,18.2,99,77,6.0,3.09
+ECO-F-0092,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Amylase,17.6,49,69,6.34,1.47
+ECO-F-0093,Alkyl Polyglucoside,Polyvinylpyrrolidone,No Enzyme,28.6,38,54,6.49,1.31
+ECO-F-0094,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Lipase,12.2,91,66,0.22,6.36
+ECO-F-0095,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,No Enzyme,42.8,83,46,5.46,2.19
+ECO-F-0096,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Cellulase,24.1,77,43,2.96,4.23
+ECO-F-0097,Alkyl Polyglucoside,Polyethylene Glycol,Protease,21.0,21,62,0.72,4.54
+ECO-F-0098,Methyl Ester Sulfonate,Polyethylene Glycol,Amylase,9.7,95,36,6.52,1.38
+ECO-F-0099,Alkyl Polyglucoside,Polyvinylpyrrolidone,Mannanase,44.6,92,58,2.67,4.62
+ECO-F-0100,Alcohol Ethoxylate,Chitosan Derivative,Amylase,15.6,94,37,0.78,4.05
+ECO-F-0101,Alcohol Ethoxylate,Polyethylene Glycol,Cellulase,23.0,45,52,5.09,2.81
+ECO-F-0102,Cocamidopropyl Betaine,Polyvinylpyrrolidone,No Enzyme,39.4,52,34,0.7,1.38
+ECO-F-0103,Cocamidopropyl Betaine,Modified Starch,No Enzyme,37.2,44,63,1.76,3.86
+ECO-F-0104,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Protease,7.4,29,58,6.76,3.23
+ECO-F-0105,Methyl Ester Sulfonate,Chitosan Derivative,Cellulase,42.7,91,66,4.3,2.86
+ECO-F-0106,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,No Enzyme,17.9,78,86,2.2,0.71
+ECO-F-0107,Sodium Lauryl Sulfate,Modified Starch,Protease,45.0,26,59,5.75,4.63
+ECO-F-0108,Alcohol Ethoxylate,Polyacrylic Acid,Mannanase,31.1,49,35,7.8,3.75
+ECO-F-0109,Alkyl Polyglucoside,Polyethylene Glycol,Cellulase,18.9,38,85,2.9,3.17
+ECO-F-0110,Cocamidopropyl Betaine,Polyacrylic Acid,Lipase,31.5,28,50,3.46,1.82
+ECO-F-0111,Methyl Ester Sulfonate,Polyethylene Glycol,Cellulase,39.6,85,34,7.03,2.84
+ECO-F-0112,Alcohol Ethoxylate,Modified Starch,Lipase,29.9,15,89,4.29,2.19
+ECO-F-0113,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Lipase,22.5,71,36,5.97,1.26
+ECO-F-0114,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,11.3,30,33,4.73,4.68
+ECO-F-0115,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Protease,30.9,85,82,1.39,1.07
+ECO-F-0116,Alkyl Polyglucoside,Polyacrylic Acid,Cellulase,14.7,52,95,4.73,3.49
+ECO-F-0117,Sodium Lauryl Sulfate,Chitosan Derivative,Amylase,39.6,64,54,2.42,4.45
+ECO-F-0118,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Protease,16.3,68,73,2.61,4.51
+ECO-F-0119,Alkyl Polyglucoside,Polyvinylpyrrolidone,Lipase,27.1,90,92,4.66,5.18
+ECO-F-0120,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Mannanase,20.3,73,71,7.29,4.22
+ECO-F-0121,Alkyl Polyglucoside,Chitosan Derivative,Cellulase,20.4,67,35,5.67,1.77
+ECO-F-0122,Sodium Lauryl Sulfate,Modified Starch,Lipase,39.8,98,49,7.44,2.84
+ECO-F-0123,Alkyl Polyglucoside,Polyethylene Glycol,No Enzyme,10.8,71,42,7.42,2.69
+ECO-F-0124,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Mannanase,32.7,34,39,5.56,2.44
+ECO-F-0125,Methyl Ester Sulfonate,Chitosan Derivative,No Enzyme,40.5,57,98,4.2,2.04
+ECO-F-0126,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Amylase,34.9,84,34,3.75,3.63
+ECO-F-0127,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Protease,6.8,27,42,6.79,2.32
+ECO-F-0128,Alcohol Ethoxylate,Carboxymethyl Cellulose,Mannanase,21.5,52,75,5.83,2.02
+ECO-F-0129,Sodium Lauryl Sulfate,Polyacrylic Acid,Mannanase,32.3,38,51,4.28,1.13
+ECO-F-0130,Alkyl Polyglucoside,Polyvinylpyrrolidone,No Enzyme,5.4,89,48,6.86,1.79
+ECO-F-0131,Methyl Ester Sulfonate,Modified Starch,Lipase,30.6,51,50,3.66,0.68
+ECO-F-0132,Alcohol Ethoxylate,Polyacrylic Acid,Cellulase,9.3,47,88,3.3,4.11
+ECO-F-0133,Methyl Ester Sulfonate,Polyethylene Glycol,No Enzyme,20.8,60,67,0.17,4.77
+ECO-F-0134,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Mannanase,37.1,21,93,1.94,4.06
+ECO-F-0135,Cocamidopropyl Betaine,Chitosan Derivative,No Enzyme,38.5,39,62,5.38,3.37
+ECO-F-0136,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,No Enzyme,10.3,95,35,7.74,2.13
+ECO-F-0137,Alcohol Ethoxylate,Modified Starch,Lipase,26.2,56,83,7.77,1.13
+ECO-F-0138,Alkyl Polyglucoside,Polyvinylpyrrolidone,No Enzyme,39.8,36,62,6.86,4.42
+ECO-F-0139,Alcohol Ethoxylate,Chitosan Derivative,No Enzyme,32.0,74,39,3.44,0.98
+ECO-F-0140,Methyl Ester Sulfonate,Modified Starch,Protease,23.2,86,76,5.75,0.92
+ECO-F-0141,Methyl Ester Sulfonate,Polyethylene Glycol,No Enzyme,14.4,48,78,0.31,4.01
+ECO-F-0142,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Cellulase,41.4,86,71,2.64,5.16
+ECO-F-0143,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Cellulase,9.6,67,44,2.07,0.97
+ECO-F-0144,Cocamidopropyl Betaine,Chitosan Derivative,Mannanase,21.8,83,47,6.34,2.52
+ECO-F-0145,Alkyl Polyglucoside,Modified Starch,Cellulase,42.6,34,83,2.45,3.26
+ECO-F-0146,Alcohol Ethoxylate,Polyvinylpyrrolidone,Protease,44.2,62,57,3.19,2.32
+ECO-F-0147,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Protease,31.5,97,75,5.49,0.73
+ECO-F-0148,Alcohol Ethoxylate,Modified Starch,Amylase,7.7,91,32,6.53,0.69
+ECO-F-0149,Alcohol Ethoxylate,Polyvinylpyrrolidone,Amylase,36.5,41,57,5.11,3.97
+ECO-F-0150,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Amylase,9.4,50,48,7.38,4.74
+ECO-F-0151,Alcohol Ethoxylate,Modified Starch,Lipase,5.6,31,31,2.33,1.94
+ECO-F-0152,Cocamidopropyl Betaine,Polyethylene Glycol,Cellulase,22.9,31,83,3.14,2.69
+ECO-F-0153,Sodium Lauryl Sulfate,Polyethylene Glycol,No Enzyme,36.3,90,43,7.38,2.75
+ECO-F-0154,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Cellulase,22.1,81,68,1.01,3.32
+ECO-F-0155,Methyl Ester Sulfonate,Modified Starch,Amylase,7.6,71,39,2.41,4.35
+ECO-F-0156,Methyl Ester Sulfonate,Polyacrylic Acid,Mannanase,29.2,96,71,0.93,2.62
+ECO-F-0157,Alcohol Ethoxylate,Polyacrylic Acid,Lipase,38.1,29,57,3.45,2.26
+ECO-F-0158,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Lipase,43.1,27,70,5.87,2.25
+ECO-F-0159,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Cellulase,8.9,75,38,6.31,0.76
+ECO-F-0160,Sodium Lauryl Sulfate,Modified Starch,Lipase,31.8,31,37,3.55,2.96
+ECO-F-0161,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Lipase,9.1,69,36,4.36,4.66
+ECO-F-0162,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Mannanase,19.7,34,91,6.51,1.35
+ECO-F-0163,Sodium Lauryl Sulfate,Modified Starch,No Enzyme,30.7,88,58,0.32,5.34
+ECO-F-0164,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Lipase,5.2,99,64,7.41,0.57
+ECO-F-0165,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,No Enzyme,26.2,87,81,3.26,0.87
+ECO-F-0166,Methyl Ester Sulfonate,Chitosan Derivative,Lipase,36.1,73,73,4.87,1.05
+ECO-F-0167,Sodium Lauryl Sulfate,Polyethylene Glycol,No Enzyme,8.3,25,36,3.82,1.04
+ECO-F-0168,Alkyl Polyglucoside,Polyvinylpyrrolidone,Amylase,35.2,69,92,1.06,3.05
+ECO-F-0169,Cocamidopropyl Betaine,Modified Starch,Cellulase,26.1,70,44,2.69,1.61
+ECO-F-0170,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Amylase,17.1,43,80,1.87,4.73
+ECO-F-0171,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Cellulase,34.9,32,62,1.58,1.64
+ECO-F-0172,Sodium Lauryl Sulfate,Modified Starch,No Enzyme,37.2,63,98,0.71,3.48
+ECO-F-0173,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Mannanase,22.2,20,85,3.5,0.43
+ECO-F-0174,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Mannanase,23.4,96,83,5.89,2.0
+ECO-F-0175,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,Cellulase,28.6,61,41,4.5,2.29
+ECO-F-0176,Alcohol Ethoxylate,Polyvinylpyrrolidone,Amylase,8.1,65,69,5.42,3.67
+ECO-F-0177,Methyl Ester Sulfonate,Chitosan Derivative,No Enzyme,37.6,82,95,2.08,1.62
+ECO-F-0178,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,8.0,33,62,8.09,1.23
+ECO-F-0179,Sodium Lauryl Sulfate,Polyacrylic Acid,No Enzyme,42.0,95,93,4.84,3.06
+ECO-F-0180,Alcohol Ethoxylate,Polyacrylic Acid,Protease,23.8,96,71,5.4,5.41
+ECO-F-0181,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Cellulase,23.1,50,37,0.58,1.92
+ECO-F-0182,Linear Alkylbenzene Sulfonate,Modified Starch,Mannanase,25.3,51,39,3.99,3.22
+ECO-F-0183,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Lipase,29.2,85,35,4.31,3.16
+ECO-F-0184,Methyl Ester Sulfonate,Chitosan Derivative,Protease,25.2,22,87,1.55,0.81
+ECO-F-0185,Sodium Lauryl Sulfate,Modified Starch,Mannanase,11.3,46,86,3.23,4.76
+ECO-F-0186,Methyl Ester Sulfonate,Chitosan Derivative,Mannanase,7.1,51,79,5.4,2.17
+ECO-F-0187,Sodium Lauryl Sulfate,Chitosan Derivative,Cellulase,16.4,57,38,6.18,1.82
+ECO-F-0188,Alcohol Ethoxylate,Polyvinylpyrrolidone,Lipase,43.7,99,49,5.97,2.34
+ECO-F-0189,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Mannanase,20.1,65,46,6.75,3.0
+ECO-F-0190,Cocamidopropyl Betaine,Polyacrylic Acid,Mannanase,19.5,31,97,3.15,0.77
+ECO-F-0191,Alkyl Polyglucoside,Carboxymethyl Cellulose,Amylase,45.0,38,57,1.4,1.87
+ECO-F-0192,Sodium Lauryl Sulfate,Chitosan Derivative,Mannanase,6.5,52,42,2.93,2.61
+ECO-F-0193,Alcohol Ethoxylate,Chitosan Derivative,Mannanase,37.4,94,46,1.49,3.45
+ECO-F-0194,Cocamidopropyl Betaine,Chitosan Derivative,Amylase,43.8,71,35,5.23,2.18
+ECO-F-0195,Methyl Ester Sulfonate,Polyacrylic Acid,Amylase,19.7,72,59,8.06,2.73
+ECO-F-0196,Alkyl Polyglucoside,Modified Starch,Mannanase,21.7,71,89,1.46,3.77
+ECO-F-0197,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Cellulase,40.0,40,47,4.76,4.23
+ECO-F-0198,Methyl Ester Sulfonate,Polyethylene Glycol,Amylase,15.9,28,96,7.7,4.14
+ECO-F-0199,Alcohol Ethoxylate,Polyacrylic Acid,Lipase,42.2,33,85,3.59,0.76
+ECO-F-0200,Alkyl Polyglucoside,Polyethylene Glycol,Lipase,14.0,65,94,2.78,2.01
+ECO-F-0201,Alcohol Ethoxylate,Polyethylene Glycol,Lipase,41.7,27,72,4.07,3.87
+ECO-F-0202,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Protease,15.2,32,90,7.11,2.35
+ECO-F-0203,Alcohol Ethoxylate,Polyvinylpyrrolidone,Protease,6.9,85,97,3.63,2.98
+ECO-F-0204,Alkyl Polyglucoside,Modified Starch,Mannanase,5.7,94,88,4.43,0.85
+ECO-F-0205,Linear Alkylbenzene Sulfonate,Modified Starch,Lipase,14.6,45,48,3.6,1.65
+ECO-F-0206,Linear Alkylbenzene Sulfonate,Modified Starch,Mannanase,25.3,25,97,8.4,4.69
+ECO-F-0207,Cocamidopropyl Betaine,Polyacrylic Acid,Lipase,15.1,85,32,0.24,2.59
+ECO-F-0208,Cocamidopropyl Betaine,Chitosan Derivative,Protease,35.9,23,74,6.28,1.42
+ECO-F-0209,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,No Enzyme,12.0,57,47,6.64,0.55
+ECO-F-0210,Alcohol Ethoxylate,Polyethylene Glycol,No Enzyme,36.0,74,91,3.94,3.16
+ECO-F-0211,Alcohol Ethoxylate,Polyethylene Glycol,Lipase,42.3,52,55,4.43,0.54
+ECO-F-0212,Alcohol Ethoxylate,Polyvinylpyrrolidone,Lipase,39.5,84,90,0.5,1.96
+ECO-F-0213,Alkyl Polyglucoside,Polyacrylic Acid,No Enzyme,22.6,98,72,8.13,2.1
+ECO-F-0214,Alkyl Polyglucoside,Polyvinylpyrrolidone,Mannanase,15.7,58,53,0.79,2.56
+ECO-F-0215,Alcohol Ethoxylate,Modified Starch,Lipase,17.8,69,40,0.77,2.27
+ECO-F-0216,Alkyl Polyglucoside,Carboxymethyl Cellulose,No Enzyme,22.8,99,67,3.86,2.2
+ECO-F-0217,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,No Enzyme,30.5,60,85,3.15,1.57
+ECO-F-0218,Sodium Lauryl Sulfate,Chitosan Derivative,Cellulase,6.4,35,33,0.66,0.99
+ECO-F-0219,Linear Alkylbenzene Sulfonate,Modified Starch,Amylase,32.2,97,76,8.07,2.72
+ECO-F-0220,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Mannanase,19.7,62,86,2.74,3.75
+ECO-F-0221,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Amylase,25.0,50,61,3.35,4.62
+ECO-F-0222,Alkyl Polyglucoside,Carboxymethyl Cellulose,Mannanase,16.4,86,45,7.8,1.78
+ECO-F-0223,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Amylase,40.9,77,55,3.84,0.9
+ECO-F-0224,Cocamidopropyl Betaine,Polyethylene Glycol,Mannanase,26.7,26,70,7.59,3.32
+ECO-F-0225,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Protease,44.4,35,52,6.75,3.88
+ECO-F-0226,Sodium Lauryl Sulfate,Modified Starch,Lipase,23.7,45,93,8.36,0.47
+ECO-F-0227,Alkyl Polyglucoside,Chitosan Derivative,No Enzyme,24.1,31,41,3.55,0.64
+ECO-F-0228,Methyl Ester Sulfonate,Chitosan Derivative,Protease,23.0,67,39,5.81,0.91
+ECO-F-0229,Sodium Lauryl Sulfate,Chitosan Derivative,Mannanase,12.3,59,46,8.22,4.26
+ECO-F-0230,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Mannanase,11.1,70,94,1.48,4.4
+ECO-F-0231,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Protease,15.0,56,58,5.43,1.89
+ECO-F-0232,Sodium Lauryl Sulfate,Polyethylene Glycol,Mannanase,30.6,85,65,5.07,1.08
+ECO-F-0233,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Mannanase,6.6,89,49,7.36,1.43
+ECO-F-0234,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,No Enzyme,13.4,25,35,4.91,4.57
+ECO-F-0235,Methyl Ester Sulfonate,Chitosan Derivative,Lipase,24.3,94,33,6.86,3.31
+ECO-F-0236,Cocamidopropyl Betaine,Polyethylene Glycol,Amylase,22.6,66,68,4.17,2.37
+ECO-F-0237,Methyl Ester Sulfonate,Chitosan Derivative,Lipase,34.4,41,73,7.33,3.05
+ECO-F-0238,Sodium Lauryl Sulfate,Modified Starch,Protease,17.8,66,46,4.02,3.73
+ECO-F-0239,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Lipase,42.8,49,87,7.36,1.45
+ECO-F-0240,Alcohol Ethoxylate,Polyvinylpyrrolidone,Mannanase,33.8,68,61,1.69,4.63
+ECO-F-0241,Alkyl Polyglucoside,Polyacrylic Acid,Lipase,24.9,35,93,0.86,4.78
+ECO-F-0242,Alcohol Ethoxylate,Carboxymethyl Cellulose,Mannanase,19.1,65,94,0.52,2.38
+ECO-F-0243,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Cellulase,10.4,78,90,2.32,1.62
+ECO-F-0244,Alkyl Polyglucoside,Polyethylene Glycol,Mannanase,27.5,61,81,3.15,1.98
+ECO-F-0245,Alkyl Polyglucoside,Modified Starch,Lipase,38.0,51,39,5.34,2.07
+ECO-F-0246,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Mannanase,42.6,93,45,6.44,1.04
+ECO-F-0247,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Protease,10.5,40,95,2.9,2.14
+ECO-F-0248,Sodium Lauryl Sulfate,Modified Starch,Amylase,18.1,75,96,5.25,2.38
+ECO-F-0249,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Mannanase,18.5,35,80,7.06,4.76
+ECO-F-0250,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Lipase,32.0,83,92,8.33,4.17
+ECO-F-0251,Cocamidopropyl Betaine,Chitosan Derivative,Protease,28.9,89,69,2.33,5.13
+ECO-F-0252,Alcohol Ethoxylate,Modified Starch,No Enzyme,33.8,98,59,6.61,4.54
+ECO-F-0253,Alcohol Ethoxylate,Polyethylene Glycol,Mannanase,42.9,63,48,1.02,4.01
+ECO-F-0254,Alcohol Ethoxylate,Polyacrylic Acid,No Enzyme,13.2,17,86,4.32,1.75
+ECO-F-0255,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Amylase,25.7,93,90,4.81,5.59
+ECO-F-0256,Alcohol Ethoxylate,Polyacrylic Acid,Mannanase,18.7,99,91,3.08,3.21
+ECO-F-0257,Alcohol Ethoxylate,Polyvinylpyrrolidone,Mannanase,16.9,97,63,8.01,3.55
+ECO-F-0258,Cocamidopropyl Betaine,Chitosan Derivative,Cellulase,17.7,53,66,3.03,3.49
+ECO-F-0259,Cocamidopropyl Betaine,Modified Starch,Cellulase,40.8,50,66,3.41,0.89
+ECO-F-0260,Methyl Ester Sulfonate,Chitosan Derivative,Protease,18.9,59,48,3.82,1.64
+ECO-F-0261,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Mannanase,32.8,47,91,1.25,1.3
+ECO-F-0262,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,14.3,93,60,0.94,1.86
+ECO-F-0263,Alcohol Ethoxylate,Polyethylene Glycol,Mannanase,44.1,57,90,1.43,0.8
+ECO-F-0264,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Lipase,30.8,98,90,7.73,2.87
+ECO-F-0265,Cocamidopropyl Betaine,Polyethylene Glycol,Amylase,21.7,26,59,7.14,2.73
+ECO-F-0266,Alcohol Ethoxylate,Chitosan Derivative,Lipase,40.1,19,80,0.18,3.86
+ECO-F-0267,Alkyl Polyglucoside,Chitosan Derivative,Mannanase,26.0,87,43,7.57,5.38
+ECO-F-0268,Alcohol Ethoxylate,Polyethylene Glycol,Lipase,11.5,32,94,3.95,2.43
+ECO-F-0269,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Mannanase,32.0,47,53,1.72,0.41
+ECO-F-0270,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,No Enzyme,8.8,93,81,8.35,5.06
+ECO-F-0271,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Cellulase,14.4,76,71,6.43,4.51
+ECO-F-0272,Sodium Lauryl Sulfate,Polyethylene Glycol,Lipase,31.1,57,68,5.92,2.94
+ECO-F-0273,Alcohol Ethoxylate,Polyacrylic Acid,No Enzyme,25.1,22,45,7.62,2.42
+ECO-F-0274,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Mannanase,13.8,54,45,8.14,3.19
+ECO-F-0275,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Cellulase,33.1,76,49,7.77,2.37
+ECO-F-0276,Sodium Lauryl Sulfate,Polyethylene Glycol,Mannanase,22.9,83,57,6.01,4.88
+ECO-F-0277,Sodium Lauryl Sulfate,Modified Starch,Amylase,27.9,24,44,1.36,0.62
+ECO-F-0278,Cocamidopropyl Betaine,Carboxymethyl Cellulose,No Enzyme,28.3,56,96,0.86,2.32
+ECO-F-0279,Alkyl Polyglucoside,Carboxymethyl Cellulose,Mannanase,21.6,80,87,4.84,3.95
+ECO-F-0280,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Lipase,37.7,86,89,6.36,3.99
+ECO-F-0281,Linear Alkylbenzene Sulfonate,Modified Starch,Protease,42.4,89,39,0.68,0.66
+ECO-F-0282,Alcohol Ethoxylate,Carboxymethyl Cellulose,No Enzyme,44.1,75,34,5.53,1.63
+ECO-F-0283,Alkyl Polyglucoside,Polyacrylic Acid,Cellulase,20.0,68,77,5.83,4.77
+ECO-F-0284,Alcohol Ethoxylate,Modified Starch,Cellulase,26.2,99,47,6.21,3.92
+ECO-F-0285,Methyl Ester Sulfonate,Polyacrylic Acid,No Enzyme,33.8,43,30,3.66,3.71
+ECO-F-0286,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Lipase,12.5,63,59,7.45,1.45
+ECO-F-0287,Alkyl Polyglucoside,Modified Starch,Protease,14.6,29,34,0.67,3.95
+ECO-F-0288,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,No Enzyme,6.8,91,34,3.79,3.04
+ECO-F-0289,Alcohol Ethoxylate,Modified Starch,Lipase,14.4,84,57,7.8,4.94
+ECO-F-0290,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Lipase,40.1,88,70,8.38,3.89
+ECO-F-0291,Sodium Lauryl Sulfate,Modified Starch,No Enzyme,41.5,81,58,5.36,2.59
+ECO-F-0292,Methyl Ester Sulfonate,Chitosan Derivative,No Enzyme,20.2,69,93,4.51,0.56
+ECO-F-0293,Alkyl Polyglucoside,Carboxymethyl Cellulose,Mannanase,23.9,68,82,7.23,1.01
+ECO-F-0294,Linear Alkylbenzene Sulfonate,Modified Starch,Cellulase,43.7,53,48,4.78,3.94
+ECO-F-0295,Alcohol Ethoxylate,Polyvinylpyrrolidone,No Enzyme,8.2,32,79,3.88,1.43
+ECO-F-0296,Alcohol Ethoxylate,Polyethylene Glycol,Lipase,20.1,62,41,5.18,2.73
+ECO-F-0297,Sodium Lauryl Sulfate,Chitosan Derivative,No Enzyme,27.4,20,39,4.13,1.19
+ECO-F-0298,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,Amylase,43.5,57,68,1.09,4.61
+ECO-F-0299,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Cellulase,41.6,76,61,4.74,3.45
+ECO-F-0300,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Lipase,15.5,51,78,4.41,2.42
+ECO-F-0301,Cocamidopropyl Betaine,Polyacrylic Acid,Lipase,41.6,78,89,3.21,0.79
+ECO-F-0302,Alcohol Ethoxylate,Chitosan Derivative,Amylase,5.6,67,35,4.75,2.85
+ECO-F-0303,Alcohol Ethoxylate,Polyacrylic Acid,Mannanase,38.3,89,83,4.29,1.93
+ECO-F-0304,Cocamidopropyl Betaine,Chitosan Derivative,No Enzyme,24.6,98,73,1.51,2.01
+ECO-F-0305,Sodium Lauryl Sulfate,Polyacrylic Acid,Amylase,41.7,60,51,4.65,0.97
+ECO-F-0306,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Protease,35.6,97,37,3.56,3.62
+ECO-F-0307,Alcohol Ethoxylate,Modified Starch,Cellulase,19.9,95,59,5.29,0.75
+ECO-F-0308,Sodium Lauryl Sulfate,Modified Starch,Cellulase,5.5,93,91,4.55,3.63
+ECO-F-0309,Linear Alkylbenzene Sulfonate,Modified Starch,No Enzyme,32.0,50,98,6.87,4.7
+ECO-F-0310,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Amylase,12.7,37,43,4.52,4.44
+ECO-F-0311,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Cellulase,23.4,60,64,2.14,3.89
+ECO-F-0312,Linear Alkylbenzene Sulfonate,Chitosan Derivative,No Enzyme,35.4,43,68,0.89,3.39
+ECO-F-0313,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Protease,33.1,63,78,0.79,2.81
+ECO-F-0314,Linear Alkylbenzene Sulfonate,Modified Starch,Protease,14.2,70,72,7.67,2.87
+ECO-F-0315,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Mannanase,27.5,87,90,0.38,2.14
+ECO-F-0316,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,37.8,55,32,7.9,4.63
+ECO-F-0317,Sodium Lauryl Sulfate,Polyacrylic Acid,No Enzyme,40.9,53,50,2.89,2.86
+ECO-F-0318,Methyl Ester Sulfonate,Polyethylene Glycol,Protease,22.5,32,40,7.14,2.58
+ECO-F-0319,Methyl Ester Sulfonate,Polyethylene Glycol,No Enzyme,15.9,58,80,8.44,4.66
+ECO-F-0320,Alkyl Polyglucoside,Polyacrylic Acid,Amylase,32.2,77,59,5.65,1.93
+ECO-F-0321,Cocamidopropyl Betaine,Polyethylene Glycol,Protease,15.7,25,67,3.29,3.9
+ECO-F-0322,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Protease,42.7,96,49,3.84,4.35
+ECO-F-0323,Alcohol Ethoxylate,Polyacrylic Acid,Cellulase,27.3,49,43,4.4,0.94
+ECO-F-0324,Sodium Lauryl Sulfate,Polyethylene Glycol,Mannanase,28.9,28,33,2.83,0.75
+ECO-F-0325,Alkyl Polyglucoside,Polyethylene Glycol,No Enzyme,41.0,64,31,7.7,1.65
+ECO-F-0326,Alkyl Polyglucoside,Carboxymethyl Cellulose,Amylase,15.8,46,96,2.35,1.1
+ECO-F-0327,Methyl Ester Sulfonate,Polyacrylic Acid,Lipase,24.4,33,38,0.75,1.09
+ECO-F-0328,Alkyl Polyglucoside,Modified Starch,Mannanase,12.8,47,61,1.0,3.56
+ECO-F-0329,Methyl Ester Sulfonate,Modified Starch,Cellulase,37.2,53,30,2.87,4.57
+ECO-F-0330,Cocamidopropyl Betaine,Modified Starch,Amylase,17.0,57,85,5.17,3.98
+ECO-F-0331,Alkyl Polyglucoside,Polyvinylpyrrolidone,Lipase,34.4,40,91,5.42,1.75
+ECO-F-0332,Alkyl Polyglucoside,Polyvinylpyrrolidone,Protease,42.3,88,61,1.78,2.13
+ECO-F-0333,Cocamidopropyl Betaine,Polyacrylic Acid,No Enzyme,13.4,84,53,6.8,4.28
+ECO-F-0334,Alcohol Ethoxylate,Chitosan Derivative,Lipase,14.7,23,82,5.63,3.34
+ECO-F-0335,Sodium Lauryl Sulfate,Polyacrylic Acid,Mannanase,21.0,69,78,4.36,0.68
+ECO-F-0336,Methyl Ester Sulfonate,Chitosan Derivative,Mannanase,28.8,68,34,7.78,3.87
+ECO-F-0337,Methyl Ester Sulfonate,Carboxymethyl Cellulose,No Enzyme,29.5,28,61,4.83,3.28
+ECO-F-0338,Alkyl Polyglucoside,Polyethylene Glycol,Protease,8.9,97,81,1.96,5.58
+ECO-F-0339,Cocamidopropyl Betaine,Modified Starch,No Enzyme,25.0,81,58,3.0,2.84
+ECO-F-0340,Alkyl Polyglucoside,Polyethylene Glycol,Protease,38.3,18,91,6.23,0.82
+ECO-F-0341,Alcohol Ethoxylate,Modified Starch,Cellulase,18.9,59,69,0.92,1.88
+ECO-F-0342,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Protease,5.9,72,70,2.98,0.65
+ECO-F-0343,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Mannanase,12.0,28,51,1.45,4.49
+ECO-F-0344,Alkyl Polyglucoside,Chitosan Derivative,Amylase,12.5,86,84,5.62,5.4
+ECO-F-0345,Alcohol Ethoxylate,Polyacrylic Acid,Mannanase,22.2,65,33,0.14,3.63
+ECO-F-0346,Cocamidopropyl Betaine,Polyethylene Glycol,Mannanase,9.1,42,56,7.42,1.59
+ECO-F-0347,Alkyl Polyglucoside,Polyethylene Glycol,Lipase,31.8,38,76,4.21,1.8
+ECO-F-0348,Sodium Lauryl Sulfate,Polyethylene Glycol,Lipase,19.1,96,70,3.95,3.86
+ECO-F-0349,Sodium Lauryl Sulfate,Polyethylene Glycol,No Enzyme,10.4,37,68,1.09,4.44
+ECO-F-0350,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Mannanase,20.5,54,44,5.11,1.16
+ECO-F-0351,Sodium Lauryl Sulfate,Chitosan Derivative,No Enzyme,42.2,88,79,1.56,2.78
+ECO-F-0352,Alcohol Ethoxylate,Polyvinylpyrrolidone,Cellulase,29.8,36,92,7.37,1.64
+ECO-F-0353,Alkyl Polyglucoside,Modified Starch,Mannanase,31.1,16,92,3.54,0.96
+ECO-F-0354,Alkyl Polyglucoside,Polyacrylic Acid,Amylase,8.3,77,83,0.36,3.51
+ECO-F-0355,Alcohol Ethoxylate,Modified Starch,Lipase,11.7,43,67,3.94,0.5
+ECO-F-0356,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Mannanase,37.9,78,95,3.18,0.85
+ECO-F-0357,Alkyl Polyglucoside,Polyethylene Glycol,No Enzyme,38.2,20,86,6.41,2.78
+ECO-F-0358,Methyl Ester Sulfonate,Polyethylene Glycol,Cellulase,39.6,53,34,1.09,2.35
+ECO-F-0359,Sodium Lauryl Sulfate,Chitosan Derivative,Lipase,39.4,45,56,5.23,3.96
+ECO-F-0360,Alcohol Ethoxylate,Carboxymethyl Cellulose,Protease,27.8,69,51,4.57,3.09
+ECO-F-0361,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Mannanase,15.7,91,98,7.31,1.53
+ECO-F-0362,Alkyl Polyglucoside,Polyethylene Glycol,Lipase,39.7,27,47,1.17,4.63
+ECO-F-0363,Methyl Ester Sulfonate,Carboxymethyl Cellulose,No Enzyme,20.7,31,61,1.29,1.0
+ECO-F-0364,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Protease,21.1,95,64,6.4,3.81
+ECO-F-0365,Methyl Ester Sulfonate,Modified Starch,Protease,39.8,62,88,7.22,4.58
+ECO-F-0366,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Protease,36.8,26,88,3.44,3.18
+ECO-F-0367,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Lipase,26.9,69,57,1.2,2.55
+ECO-F-0368,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Protease,30.0,77,73,7.13,4.33
+ECO-F-0369,Alcohol Ethoxylate,Polyacrylic Acid,Cellulase,5.0,17,45,8.15,4.49
+ECO-F-0370,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Lipase,8.7,40,46,3.13,4.28
+ECO-F-0371,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Protease,20.9,25,77,2.67,3.31
+ECO-F-0372,Cocamidopropyl Betaine,Polyethylene Glycol,Protease,13.5,44,84,0.75,3.27
+ECO-F-0373,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Lipase,37.7,90,58,8.4,3.28
+ECO-F-0374,Alcohol Ethoxylate,Polyacrylic Acid,Protease,34.2,69,46,0.96,2.48
+ECO-F-0375,Alcohol Ethoxylate,Polyacrylic Acid,Amylase,30.7,55,77,5.79,4.27
+ECO-F-0376,Sodium Lauryl Sulfate,Chitosan Derivative,Amylase,22.6,23,97,6.17,2.86
+ECO-F-0377,Alkyl Polyglucoside,Carboxymethyl Cellulose,Protease,40.9,95,49,1.28,5.71
+ECO-F-0378,Alkyl Polyglucoside,Polyvinylpyrrolidone,Amylase,14.9,30,79,5.51,1.91
+ECO-F-0379,Cocamidopropyl Betaine,Polyethylene Glycol,No Enzyme,40.0,46,66,1.83,3.82
+ECO-F-0380,Cocamidopropyl Betaine,Polyethylene Glycol,Amylase,24.8,92,95,1.05,1.45
+ECO-F-0381,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Lipase,10.3,78,39,7.33,2.7
+ECO-F-0382,Alkyl Polyglucoside,Polyethylene Glycol,Protease,28.5,87,83,0.22,2.58
+ECO-F-0383,Alkyl Polyglucoside,Modified Starch,Lipase,30.1,42,35,4.31,4.46
+ECO-F-0384,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Mannanase,26.5,68,84,1.38,3.47
+ECO-F-0385,Alcohol Ethoxylate,Carboxymethyl Cellulose,Mannanase,18.1,25,69,5.03,0.7
+ECO-F-0386,Alcohol Ethoxylate,Polyethylene Glycol,Amylase,8.4,98,38,3.75,2.13
+ECO-F-0387,Cocamidopropyl Betaine,Chitosan Derivative,No Enzyme,12.0,73,37,0.21,1.73
+ECO-F-0388,Methyl Ester Sulfonate,Modified Starch,Mannanase,36.3,32,31,6.15,1.08
+ECO-F-0389,Methyl Ester Sulfonate,Chitosan Derivative,Protease,35.9,36,77,0.35,0.91
+ECO-F-0390,Methyl Ester Sulfonate,Chitosan Derivative,Mannanase,30.1,69,64,4.27,2.68
+ECO-F-0391,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Lipase,11.3,80,76,6.6,0.6
+ECO-F-0392,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Amylase,6.8,88,44,3.16,1.71
+ECO-F-0393,Linear Alkylbenzene Sulfonate,Modified Starch,No Enzyme,34.6,34,52,3.62,4.49
+ECO-F-0394,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Lipase,38.0,56,61,4.9,2.2
+ECO-F-0395,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,Amylase,37.2,30,94,8.34,3.35
+ECO-F-0396,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Lipase,8.5,66,38,3.94,4.25
+ECO-F-0397,Methyl Ester Sulfonate,Chitosan Derivative,Mannanase,14.7,62,55,3.19,1.65
+ECO-F-0398,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Amylase,5.3,78,55,3.54,3.61
+ECO-F-0399,Cocamidopropyl Betaine,Polyethylene Glycol,Lipase,5.1,44,74,5.62,3.18
+ECO-F-0400,Alcohol Ethoxylate,Polyacrylic Acid,Cellulase,43.4,54,43,8.27,1.26
+ECO-F-0401,Alcohol Ethoxylate,Modified Starch,Cellulase,33.0,33,65,3.23,0.76
+ECO-F-0402,Cocamidopropyl Betaine,Polyacrylic Acid,Protease,28.7,25,42,0.62,2.6
+ECO-F-0403,Methyl Ester Sulfonate,Polyacrylic Acid,No Enzyme,38.3,99,46,2.84,1.65
+ECO-F-0404,Alcohol Ethoxylate,Carboxymethyl Cellulose,Mannanase,9.4,72,64,0.99,1.39
+ECO-F-0405,Linear Alkylbenzene Sulfonate,Modified Starch,Lipase,43.6,72,89,1.84,1.75
+ECO-F-0406,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Amylase,37.3,54,89,2.66,1.53
+ECO-F-0407,Alcohol Ethoxylate,Polyethylene Glycol,No Enzyme,14.9,92,35,3.09,1.77
+ECO-F-0408,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Protease,43.1,80,36,7.28,3.36
+ECO-F-0409,Alcohol Ethoxylate,Polyethylene Glycol,Protease,7.5,86,61,6.66,0.87
+ECO-F-0410,Alkyl Polyglucoside,Polyvinylpyrrolidone,No Enzyme,30.2,43,46,5.52,1.23
+ECO-F-0411,Linear Alkylbenzene Sulfonate,Carboxymethyl Cellulose,No Enzyme,22.7,89,63,1.18,4.98
+ECO-F-0412,Alkyl Polyglucoside,Polyethylene Glycol,Amylase,42.0,57,45,3.74,0.54
+ECO-F-0413,Cocamidopropyl Betaine,Polyacrylic Acid,Amylase,19.2,65,93,7.73,0.48
+ECO-F-0414,Alcohol Ethoxylate,Polyethylene Glycol,Mannanase,29.8,50,65,2.16,2.33
+ECO-F-0415,Sodium Lauryl Sulfate,Polyacrylic Acid,Protease,8.5,52,93,3.32,2.18
+ECO-F-0416,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,44.8,68,55,4.67,3.21
+ECO-F-0417,Methyl Ester Sulfonate,Polyacrylic Acid,Mannanase,36.3,17,78,2.99,3.83
+ECO-F-0418,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Mannanase,13.8,87,94,7.62,2.1
+ECO-F-0419,Alkyl Polyglucoside,Modified Starch,Lipase,35.7,50,37,8.5,3.95
+ECO-F-0420,Alcohol Ethoxylate,Polyvinylpyrrolidone,Mannanase,37.7,35,42,7.8,1.45
+ECO-F-0421,Alkyl Polyglucoside,Polyvinylpyrrolidone,Amylase,12.0,22,58,5.08,2.91
+ECO-F-0422,Methyl Ester Sulfonate,Modified Starch,Mannanase,10.7,60,33,8.07,3.48
+ECO-F-0423,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Protease,14.3,78,69,1.94,1.13
+ECO-F-0424,Alcohol Ethoxylate,Carboxymethyl Cellulose,Lipase,33.7,82,91,7.82,0.49
+ECO-F-0425,Sodium Lauryl Sulfate,Chitosan Derivative,Amylase,36.0,56,37,7.21,0.45
+ECO-F-0426,Cocamidopropyl Betaine,Polyacrylic Acid,Mannanase,9.0,61,39,2.63,2.01
+ECO-F-0427,Alkyl Polyglucoside,Chitosan Derivative,Cellulase,31.0,32,50,1.56,3.61
+ECO-F-0428,Alcohol Ethoxylate,Polyacrylic Acid,Lipase,34.4,86,75,2.57,1.72
+ECO-F-0429,Sodium Lauryl Sulfate,Polyacrylic Acid,Mannanase,6.3,37,30,5.16,4.57
+ECO-F-0430,Alkyl Polyglucoside,Carboxymethyl Cellulose,Lipase,34.8,93,58,2.1,3.62
+ECO-F-0431,Linear Alkylbenzene Sulfonate,Chitosan Derivative,No Enzyme,30.6,55,51,7.55,3.18
+ECO-F-0432,Alcohol Ethoxylate,Chitosan Derivative,Protease,19.0,72,31,6.71,1.53
+ECO-F-0433,Cocamidopropyl Betaine,Polyacrylic Acid,Amylase,40.4,15,36,4.24,2.07
+ECO-F-0434,Linear Alkylbenzene Sulfonate,Polyacrylic Acid,Mannanase,31.0,63,74,5.87,2.78
+ECO-F-0435,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Protease,17.7,35,87,8.09,0.68
+ECO-F-0436,Alkyl Polyglucoside,Carboxymethyl Cellulose,No Enzyme,8.0,24,73,8.01,1.11
+ECO-F-0437,Sodium Lauryl Sulfate,Polyacrylic Acid,No Enzyme,6.2,26,73,8.02,2.99
+ECO-F-0438,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,Amylase,44.0,36,85,3.54,1.05
+ECO-F-0439,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Cellulase,27.9,85,63,7.15,3.91
+ECO-F-0440,Alkyl Polyglucoside,Polyethylene Glycol,Lipase,38.0,34,36,5.35,1.96
+ECO-F-0441,Alcohol Ethoxylate,Carboxymethyl Cellulose,No Enzyme,16.7,76,55,0.79,0.78
+ECO-F-0442,Alkyl Polyglucoside,Polyacrylic Acid,No Enzyme,15.6,29,69,5.49,3.84
+ECO-F-0443,Alkyl Polyglucoside,Polyvinylpyrrolidone,Amylase,22.8,64,53,2.31,2.0
+ECO-F-0444,Methyl Ester Sulfonate,Modified Starch,Protease,11.0,74,63,5.95,1.36
+ECO-F-0445,Sodium Lauryl Sulfate,Polyacrylic Acid,Mannanase,14.1,27,40,0.61,3.32
+ECO-F-0446,Sodium Lauryl Sulfate,Chitosan Derivative,Cellulase,27.9,64,96,2.08,2.21
+ECO-F-0447,Cocamidopropyl Betaine,Polyethylene Glycol,Mannanase,27.8,53,40,4.44,2.11
+ECO-F-0448,Alcohol Ethoxylate,Carboxymethyl Cellulose,Amylase,37.3,88,48,1.16,1.17
+ECO-F-0449,Alkyl Polyglucoside,Carboxymethyl Cellulose,No Enzyme,10.9,69,40,5.1,4.75
+ECO-F-0450,Sodium Lauryl Sulfate,Polyacrylic Acid,Mannanase,18.0,55,38,2.42,0.74
+ECO-F-0451,Sodium Lauryl Sulfate,Modified Starch,Mannanase,36.3,73,31,1.05,3.85
+ECO-F-0452,Sodium Lauryl Sulfate,Polyethylene Glycol,Protease,27.5,34,48,0.95,2.87
+ECO-F-0453,Alkyl Polyglucoside,Polyvinylpyrrolidone,Cellulase,31.2,51,98,4.9,4.27
+ECO-F-0454,Alkyl Polyglucoside,Carboxymethyl Cellulose,Mannanase,29.3,75,34,5.93,1.12
+ECO-F-0455,Methyl Ester Sulfonate,Chitosan Derivative,Amylase,7.0,19,80,4.09,4.31
+ECO-F-0456,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Lipase,38.7,49,77,7.31,0.44
+ECO-F-0457,Cocamidopropyl Betaine,Polyacrylic Acid,Lipase,15.8,27,59,3.6,0.95
+ECO-F-0458,Alkyl Polyglucoside,Chitosan Derivative,Cellulase,35.4,97,41,7.38,1.38
+ECO-F-0459,Linear Alkylbenzene Sulfonate,Polyvinylpyrrolidone,No Enzyme,25.3,22,95,1.24,3.87
+ECO-F-0460,Alcohol Ethoxylate,Polyethylene Glycol,Amylase,6.3,82,33,0.52,1.53
+ECO-F-0461,Alkyl Polyglucoside,Modified Starch,Cellulase,30.4,61,55,1.14,1.57
+ECO-F-0462,Sodium Lauryl Sulfate,Polyacrylic Acid,Amylase,43.4,18,60,4.09,2.01
+ECO-F-0463,Methyl Ester Sulfonate,Chitosan Derivative,No Enzyme,8.6,85,74,0.33,2.54
+ECO-F-0464,Alcohol Ethoxylate,Carboxymethyl Cellulose,No Enzyme,14.0,21,50,1.84,4.15
+ECO-F-0465,Cocamidopropyl Betaine,Polyethylene Glycol,Cellulase,41.5,98,82,5.54,3.58
+ECO-F-0466,Methyl Ester Sulfonate,Chitosan Derivative,No Enzyme,30.7,91,31,3.66,1.73
+ECO-F-0467,Alcohol Ethoxylate,Polyacrylic Acid,Lipase,32.1,63,74,7.02,2.39
+ECO-F-0468,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Mannanase,30.9,65,43,5.22,0.38
+ECO-F-0469,Methyl Ester Sulfonate,Polyvinylpyrrolidone,No Enzyme,18.0,53,43,2.43,2.49
+ECO-F-0470,Alcohol Ethoxylate,Polyethylene Glycol,Mannanase,21.2,98,68,2.78,1.49
+ECO-F-0471,Methyl Ester Sulfonate,Polyvinylpyrrolidone,Cellulase,21.2,32,33,6.29,3.27
+ECO-F-0472,Cocamidopropyl Betaine,Modified Starch,No Enzyme,36.4,89,54,7.71,2.47
+ECO-F-0473,Alcohol Ethoxylate,Chitosan Derivative,Mannanase,12.2,60,94,0.92,1.69
+ECO-F-0474,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,No Enzyme,41.0,31,63,5.6,3.58
+ECO-F-0475,Methyl Ester Sulfonate,Polyacrylic Acid,Lipase,19.9,43,75,5.02,1.34
+ECO-F-0476,Cocamidopropyl Betaine,Modified Starch,Mannanase,42.8,74,45,0.7,2.44
+ECO-F-0477,Cocamidopropyl Betaine,Polyacrylic Acid,Mannanase,16.9,39,94,0.55,0.88
+ECO-F-0478,Methyl Ester Sulfonate,Polyacrylic Acid,Mannanase,40.7,34,47,8.39,4.77
+ECO-F-0479,Alcohol Ethoxylate,Polyethylene Glycol,Cellulase,18.3,33,70,8.39,4.19
+ECO-F-0480,Methyl Ester Sulfonate,Carboxymethyl Cellulose,Amylase,28.1,55,37,1.43,0.37
+ECO-F-0481,Cocamidopropyl Betaine,Polyacrylic Acid,Cellulase,22.2,26,46,4.11,3.08
+ECO-F-0482,Cocamidopropyl Betaine,Polyvinylpyrrolidone,Protease,40.7,15,34,6.46,2.73
+ECO-F-0483,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Amylase,32.7,82,54,2.99,0.47
+ECO-F-0484,Sodium Lauryl Sulfate,Polyvinylpyrrolidone,Amylase,7.6,31,43,0.48,2.06
+ECO-F-0485,Sodium Lauryl Sulfate,Modified Starch,Lipase,22.3,52,88,5.87,3.59
+ECO-F-0486,Alkyl Polyglucoside,Polyvinylpyrrolidone,Amylase,11.6,32,73,7.72,4.78
+ECO-F-0487,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Amylase,34.4,66,32,5.05,1.37
+ECO-F-0488,Cocamidopropyl Betaine,Polyethylene Glycol,Cellulase,40.1,36,45,2.25,1.98
+ECO-F-0489,Linear Alkylbenzene Sulfonate,Chitosan Derivative,Protease,6.9,83,36,1.07,3.34
+ECO-F-0490,Methyl Ester Sulfonate,Polyacrylic Acid,No Enzyme,11.1,71,78,5.94,0.9
+ECO-F-0491,Cocamidopropyl Betaine,Modified Starch,Lipase,29.9,95,31,5.99,2.19
+ECO-F-0492,Sodium Lauryl Sulfate,Polyethylene Glycol,Lipase,9.6,68,43,0.99,2.63
+ECO-F-0493,Sodium Lauryl Sulfate,Carboxymethyl Cellulose,Lipase,33.1,40,55,2.58,3.81
+ECO-F-0494,Cocamidopropyl Betaine,Polyacrylic Acid,Lipase,14.4,20,93,0.21,4.4
+ECO-F-0495,Cocamidopropyl Betaine,Polyacrylic Acid,Amylase,43.0,26,44,6.65,4.07
+ECO-F-0496,Cocamidopropyl Betaine,Carboxymethyl Cellulose,Cellulase,44.5,24,42,2.59,4.38
+ECO-F-0497,Alcohol Ethoxylate,Polyethylene Glycol,Lipase,19.4,74,36,5.78,0.79
+ECO-F-0498,Linear Alkylbenzene Sulfonate,Polyethylene Glycol,Amylase,31.5,69,44,1.53,0.77
+ECO-F-0499,Methyl Ester Sulfonate,Chitosan Derivative,Protease,19.9,60,86,2.98,4.6
+ECO-F-0500,Alkyl Polyglucoside,Polyvinylpyrrolidone,Cellulase,32.6,29,81,4.12,2.13
