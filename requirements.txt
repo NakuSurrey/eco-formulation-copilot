@@ -1,0 +1,24 @@
+# ============================================================
+# Eco-Formulation Copilot - Python Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+# ============================================================
+
+# --- Core Framework ---
+streamlit==1.41.1                  # Web app framework (dashboard + chat UI)
+
+# --- AI / Agent ---
+langchain==0.3.14                  # Agent orchestration framework
+langchain-google-genai==2.0.8      # Google Gemini LLM integration for LangChain
+langchain-experimental==0.3.4      # Contains create_pandas_dataframe_agent
+
+# --- Data & Visualisation ---
+pandas==2.2.3                      # Tabular data manipulation (our mini-Databricks)
+plotly==5.24.1                     # Interactive charts (our mini-Power BI)
+
+# --- Configuration ---
+python-dotenv==1.0.1               # Loads secrets from .env file
+
+# --- Code Quality (development only) ---
+flake8==7.1.1                      # Linter - checks code style automatically
+pytest==8.3.4                      # Test runner

@@ -1,0 +1,38 @@
+# ============================================================
+# Eco-Formulation Copilot - Git Ignore Rules
+# ============================================================
+
+# --- Secrets (CRITICAL - never commit these) ---
+.env
+
+# --- Python cache files ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# --- Virtual environment ---
+venv/
+.venv/
+env/
+
+# --- IDE files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Docker ---
+*.log
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+
+*.md
