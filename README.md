@@ -221,14 +221,6 @@ The badge at the top of this README shows the current status.
 
 ---
 
-## Author
-
-**Sean Nakul Ari** — MSc Artificial Intelligence, University of Surrey
-
-Built as a proof-of-concept for the P&G Newcastle Software Development Industrial Placement 2026, demonstrating Agentic AI applied to structured R&D data for sustainable product formulation.
-
----
-
 ## License
 
 This project is available for educational and portfolio purposes.
