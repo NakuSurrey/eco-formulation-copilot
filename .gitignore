@@ -13,6 +13,10 @@ __pycache__/
 dist/
 build/
 
+# --- Pytest cache ---
+.pytest_cache/
+pytest-cache-files-*/
+
 # --- Virtual environment ---
 venv/
 .venv/
@@ -33,6 +37,3 @@ Thumbs.db
 
 # --- Streamlit ---
 .streamlit/secrets.toml
-
-
-*.md
