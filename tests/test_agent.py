@@ -14,7 +14,6 @@ run in CI/CD (GitHub Actions) without exposing secrets.
 
 import os
 import pytest
-import pandas as pd
 
 from src.agent import SYSTEM_PROMPT, query_agent
 

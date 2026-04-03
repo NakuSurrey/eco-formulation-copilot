@@ -1,0 +1,119 @@
+# ============================================================
+# Eco-Formulation Copilot — CI/CD Pipeline
+# ============================================================
+# This file tells GitHub Actions WHAT to do every time
+# code is pushed to the repository.
+#
+# WHAT IT DOES (3 jobs):
+#   Job 1: Lint    → Runs flake8 to check code style
+#   Job 2: Test    → Runs pytest to execute all unit tests
+#   Job 3: Docker  → Verifies the Docker image builds successfully
+#
+# WHY IT EXISTS:
+#   Trait #77 (CI/CD-automated). A green checkmark badge on
+#   the GitHub repo proves enterprise DevOps workflow knowledge.
+#   If any job fails, the badge turns red — forcing you to fix
+#   the issue before it reaches production.
+#
+# WHEN IT RUNS:
+#   - On every push to the main branch
+#   - On every pull request targeting the main branch
+# ============================================================
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # --------------------------------------------------------
+  # Job 1: Lint — Code Style Check
+  # --------------------------------------------------------
+  # flake8 reads every .py file and checks for style violations:
+  #   - Lines longer than 120 characters
+  #   - Unused imports
+  #   - Missing whitespace
+  #   - Syntax errors
+  #
+  # If ANY violation is found, this job fails and the push
+  # gets a red X on GitHub.
+  # --------------------------------------------------------
+  lint:
+    name: Lint (flake8)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install flake8
+        run: pip install flake8==7.1.1
+
+      - name: Run flake8
+        run: |
+          flake8 src/ tests/ app.py \
+            --max-line-length=120 \
+            --exclude=__pycache__,venv \
+            --count \
+            --show-source \
+            --statistics
+
+  # --------------------------------------------------------
+  # Job 2: Test — Unit Tests
+  # --------------------------------------------------------
+  # Installs all project dependencies, then runs pytest.
+  #
+  # IMPORTANT: Tests that need a real GOOGLE_API_KEY are
+  # decorated with @pytest.mark.skipif(not GOOGLE_API_KEY).
+  # Since we do NOT store the API key in GitHub Secrets,
+  # those tests are automatically skipped in CI.
+  # The remaining tests (data loading, prompt content,
+  # error handling) run fully without any API key.
+  # --------------------------------------------------------
+  test:
+    name: Test (pytest)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest tests/ -v --tb=short
+
+  # --------------------------------------------------------
+  # Job 3: Docker — Build Verification
+  # --------------------------------------------------------
+  # Runs "docker build" to verify the Dockerfile produces
+  # a valid image. Does NOT push the image anywhere — this
+  # is purely a "does it build?" check.
+  #
+  # If the Dockerfile has a syntax error, a missing file,
+  # or a broken pip install, this job catches it.
+  # --------------------------------------------------------
+  docker:
+    name: Docker Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t eco-formulation-copilot:ci .

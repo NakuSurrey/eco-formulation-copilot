@@ -1,0 +1,63 @@
+# ============================================================
+# Eco-Formulation Copilot — Docker Ignore Rules
+# ============================================================
+# When Docker runs "COPY . ." in the Dockerfile, it copies
+# everything from the project folder into the container.
+# This file tells Docker which files to SKIP.
+#
+# WHY THIS MATTERS:
+# 1. Smaller container  → faster builds, faster deployments
+# 2. No secrets leaked  → .env never enters the container image
+# 3. No junk copied     → cache files, IDE configs stay out
+# ============================================================
+
+# --- Secrets (CRITICAL) ---
+.env
+
+# --- Virtual environment (container installs its own) ---
+venv/
+.venv/
+env/
+
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- Pytest cache ---
+.pytest_cache/
+pytest-cache-files-*/
+
+# --- Git (not needed inside container) ---
+.git/
+.gitignore
+
+# --- GitHub workflows (not needed inside container) ---
+.github/
+
+# --- IDE files ---
+.vscode/
+.idea/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Docker (prevent recursive copy) ---
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# --- Documentation (not needed at runtime) ---
+*.md
+PLAN.md
+ERRORS.md
+PHASE_*.md
+COMPLETE_REFERENCE.md
+CLAUDE.md
+
+# --- Tests (not needed in production container) ---
+tests/
+
+# --- Data generation script (CSV is already generated) ---
+data/generate_data.py
