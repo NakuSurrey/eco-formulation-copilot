@@ -31,23 +31,37 @@ load_dotenv()
 
 def _get_secret(key: str, default: str = "") -> str:
     """
-    Tries to read a secret from Streamlit Cloud Secrets first.
-    If not found (or not running on Streamlit Cloud), falls back
-    to the environment variable loaded from .env.
+    Tries to read a secret from the .env file first (via os.getenv).
+    If not found, falls back to Streamlit Cloud Secrets (st.secrets).
 
-    WHY THIS EXISTS:
-    - On Streamlit Cloud: secrets live in st.secrets (a TOML file
-      managed through the Streamlit dashboard, never in the repo).
-    - On your local machine: secrets live in .env (loaded by dotenv).
-    - This function checks both places so the same code works everywhere.
+    WHY THIS ORDER MATTERS:
+    - Checking os.getenv() FIRST avoids touching st.secrets at module
+      load time. Streamlit treats st.secrets access as a "command",
+      and if any command runs before st.set_page_config(), Streamlit
+      crashes. By checking the environment variable first, st.secrets
+      is only touched if the .env value is missing — which only
+      happens on Streamlit Cloud where set_page_config timing is
+      handled differently.
+    - On your local machine / VPS: secrets come from .env → os.getenv
+      finds them → st.secrets is never touched → no crash.
+    - On Streamlit Cloud: no .env file exists → os.getenv returns ""
+      → falls through to st.secrets → works because Streamlit Cloud
+      manages the timing internally.
     """
+    # Check environment variable first (loaded from .env by dotenv)
+    env_value = os.getenv(key, "")
+    if env_value:
+        return env_value
+
+    # Fall back to Streamlit Cloud Secrets (only reached if .env is missing)
     try:
         import streamlit as st
-        if key in st.secrets:
+        if hasattr(st, "secrets") and key in st.secrets:
             return st.secrets[key]
     except Exception:
         pass
-    return os.getenv(key, default)
+
+    return default
 
 
 # ============================================================
