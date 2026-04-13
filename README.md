@@ -16,7 +16,7 @@ Built specifically to demonstrate the technical skills required for the **P&G Ne
 
 ## Live Demo
 
-> **Coming soon** — Deployment to Streamlit Community Cloud is in progress.
+**[http://46.225.208.197](http://46.225.208.197)** — deployed on a Hetzner Cloud VPS (Ubuntu, Nginx reverse proxy, systemd service).
 
 ---
 
@@ -82,7 +82,7 @@ The scientist never writes or sees any code. The LLM handles the translation fro
 | **Python 3.10** | Core language | Entire stack is Python-native |
 | **Streamlit** | Web framework | Full dashboard + chat UI in under 100 lines. No HTML/CSS/JS needed |
 | **LangChain** | Agent orchestration | Pre-built `create_pandas_dataframe_agent` for structured data querying |
-| **Google Gemini 1.5 Flash** | LLM | Free tier (1,500 req/day), no credit card, fast response times |
+| **Google Gemini 2.0 Flash** | LLM | Free tier (30 req/min), no credit card, fast response times |
 | **Pandas** | Data manipulation | Lightweight Databricks substitute. Agent writes Pandas code to query data |
 | **Plotly** | Data visualisation | Interactive charts (hover, zoom, filter). Lightweight Power BI substitute |
 | **Docker** | Containerisation | Packages entire app into a portable image. Runs identically on any machine |

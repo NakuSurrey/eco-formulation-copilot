@@ -2,8 +2,9 @@
 Configuration module for the Eco-Formulation Copilot.
 
 This file is the SINGLE source of truth for all application settings.
-It loads secret values (like the Google API key) from a .env file
-and provides default values for non-secret settings.
+It loads secret values (like the Google API key) from EITHER:
+  1. Streamlit Cloud Secrets (st.secrets) — used in production
+  2. A local .env file — used in local development
 
 Every other file in the project imports from here instead of
 reading environment variables directly.
@@ -14,14 +15,39 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # ============================================================
-# Step 1: Load the .env file
+# Step 1: Load the .env file (local development only)
 # ============================================================
 # load_dotenv() searches for a file called .env in the project root.
 # It reads each line (e.g., GOOGLE_API_KEY=abc123) and loads them
 # into the operating system's environment variables, so os.getenv()
 # can find them.
+#
+# On Streamlit Community Cloud, there is no .env file.
+# Instead, secrets are stored in Streamlit's Secrets Manager.
+# We try st.secrets FIRST, then fall back to os.getenv().
 # ============================================================
 load_dotenv()
+
+
+def _get_secret(key: str, default: str = "") -> str:
+    """
+    Tries to read a secret from Streamlit Cloud Secrets first.
+    If not found (or not running on Streamlit Cloud), falls back
+    to the environment variable loaded from .env.
+
+    WHY THIS EXISTS:
+    - On Streamlit Cloud: secrets live in st.secrets (a TOML file
+      managed through the Streamlit dashboard, never in the repo).
+    - On your local machine: secrets live in .env (loaded by dotenv).
+    - This function checks both places so the same code works everywhere.
+    """
+    try:
+        import streamlit as st
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    return os.getenv(key, default)
 
 
 # ============================================================
@@ -29,12 +55,12 @@ load_dotenv()
 # ============================================================
 
 # --- Google Gemini Settings ---
-GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY", "")
-GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+GOOGLE_API_KEY: str = _get_secret("GOOGLE_API_KEY", "")
+GEMINI_MODEL: str = _get_secret("GEMINI_MODEL", "gemini-2.0-flash")
 
 # --- Application Settings ---
-APP_TITLE: str = os.getenv("APP_TITLE", "Eco-Formulation Copilot")
-DATA_PATH: str = os.getenv("DATA_PATH", "data/formulations.csv")
+APP_TITLE: str = _get_secret("APP_TITLE", "Eco-Formulation Copilot")
+DATA_PATH: str = _get_secret("DATA_PATH", "data/formulations.csv")
 
 # --- Project Root Path ---
 # This calculates the absolute path to the project root folder.

@@ -15,6 +15,7 @@ langchain-experimental==0.3.4      # Contains create_pandas_dataframe_agent
 # --- Data & Visualisation ---
 pandas==2.2.3                      # Tabular data manipulation (our mini-Databricks)
 plotly==5.24.1                     # Interactive charts (our mini-Power BI)
+tabulate==0.9.0                    # Table formatting — LangChain agent uses this to render markdown tables
 
 # --- Configuration ---
 python-dotenv==1.0.1               # Loads secrets from .env file
