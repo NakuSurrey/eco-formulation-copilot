@@ -62,6 +62,12 @@ The scientist never writes or sees any code. The LLM handles the translation fro
 
 ---
 
+## Why I Built It
+
+The P&G Newcastle Innovation Centre placement asks for Databricks, Power BI, Microsoft Copilot Studio, and Agentic AI. Instead of listing these as buzzwords on a CV, I built a working app that proves I can use equivalent tools. Pandas replaces Databricks for data pipelines. Plotly replaces Power BI for dashboards. LangChain with Google Gemini replaces Copilot Studio for agentic AI. The dataset is synthetic but the architecture is real — a scientist types a question in English, an AI agent writes and runs Pandas code, and the answer comes back in seconds. Every piece was built from scratch, tested with 20 automated tests, deployed to a live server, and pushed through a CI/CD pipeline. This is not a tutorial clone. Every decision in this codebase has a reason.
+
+---
+
 ## How This Maps to the P&G Job Description
 
 | P&G Requirement | Implementation in This Project |
@@ -137,8 +143,7 @@ eco-formulation-copilot/
 ├── .dockerignore             — Files excluded from Docker image
 ├── requirements.txt          — Pinned Python dependencies
 ├── .env.example              — Template for environment variables
-├── .gitignore                — Files excluded from Git
-└── ERRORS.md                 — Running log of every error and its fix
+└── .gitignore                — Files excluded from Git
 ```
 
 ---
@@ -218,6 +223,40 @@ Every push to `main` triggers three parallel jobs on GitHub Actions:
 3. **Docker** — Verifies the Docker image builds successfully
 
 The badge at the top of this README shows the current status.
+
+---
+
+## Screenshot
+
+![Eco-Formulation Copilot Dashboard](screenshot.png)
+
+---
+
+## Key Decisions
+
+- **Google Gemini over OpenAI GPT** — Gemini offers a free tier with no credit card required for initial setup. For a portfolio project that recruiters need to test live, zero-cost matters. GPT-4 would cost money per query.
+
+- **Streamlit over Flask/React** — Streamlit builds a full dashboard with charts, metrics, and a chat interface in a single Python file. Flask would need HTML templates and JavaScript. React would need a separate frontend build. Streamlit keeps the entire stack in Python.
+
+- **LangChain DataFrame Agent over raw API calls** — The agent automatically translates English to Pandas code, executes it, and returns the result. Building this from scratch would mean writing a custom prompt parser, code executor, and error handler. LangChain handles all of that.
+
+- **Synthetic data over real data** — Generated 500 rows with realistic ranges and correlations using `random.seed(42)` for reproducibility. Real P&G data is confidential. Synthetic data lets anyone clone and run the project without access to proprietary datasets.
+
+- **Model name in .env, not hardcoded** — Google retired two Gemini models during this build (1.5-flash and 2.0-flash). Storing the model name in `.env` means upgrading takes one line change instead of a code push.
+
+- **Lazy import for agent module** — `langchain-google-genai` v4+ triggers Streamlit commands during import. Moving the import to after `set_page_config()` prevents a crash. This is a real-world packaging issue, not a textbook pattern.
+
+---
+
+## What I Learned
+
+- LLM model names are temporary — Google retired two models during this single project build
+- Free tier does not mean free access — without billing linked, the Gemini API quota was literally zero
+- Package upgrades can break working code — `langchain-experimental` removed a parameter between versions with no deprecation warning
+- Import order matters in Streamlit — any `st.*` call before `set_page_config()` crashes the app, including calls hidden inside third-party package imports
+- Always test with raw `curl` before blaming application code — this saved hours of debugging by proving the API key and model were the problem, not the agent
+- Error handling at the application level is more reliable than library-level flags — wrapping `agent.invoke()` in `try/except` survived a library upgrade that removed `handle_parsing_errors`
+- CI/CD catches things local testing misses — flake8 in GitHub Actions caught an unused import that worked fine locally
 
 ---
 
