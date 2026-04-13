@@ -8,9 +8,9 @@
 streamlit==1.41.1                  # Web app framework (dashboard + chat UI)
 
 # --- AI / Agent ---
-langchain==0.3.14                  # Agent orchestration framework
-langchain-google-genai==2.0.8      # Google Gemini LLM integration for LangChain
-langchain-experimental==0.3.4      # Contains create_pandas_dataframe_agent
+langchain>=0.3.14                  # Agent orchestration framework
+langchain-google-genai>=2.1.0      # Google Gemini LLM integration for LangChain (needs 2.1+ for thinking_budget)
+langchain-experimental>=0.3.4      # Contains create_pandas_dataframe_agent
 
 # --- Data & Visualisation ---
 pandas==2.2.3                      # Tabular data manipulation (our mini-Databricks)

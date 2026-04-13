@@ -70,7 +70,7 @@ def _get_secret(key: str, default: str = "") -> str:
 
 # --- Google Gemini Settings ---
 GOOGLE_API_KEY: str = _get_secret("GOOGLE_API_KEY", "")
-GEMINI_MODEL: str = _get_secret("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL: str = _get_secret("GEMINI_MODEL", "gemini-2.5-flash")
 
 # --- Application Settings ---
 APP_TITLE: str = _get_secret("APP_TITLE", "Eco-Formulation Copilot")

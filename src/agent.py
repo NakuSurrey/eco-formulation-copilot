@@ -98,10 +98,16 @@ def create_agent(df: pd.DataFrame) -> object:
     # Step 2: Initialise the Google Gemini LLM
     # temperature=0 means the LLM gives the most deterministic answer.
     # For data queries, we want exact answers, not creative ones.
+    #
+    # thinking_budget=0 turns off the "thinking" feature in
+    # gemini-2.5-flash. Without this, the model adds internal
+    # reasoning tokens that confuse LangChain's ReAct parser
+    # and cause output parsing errors.
     llm = ChatGoogleGenerativeAI(
         model=GEMINI_MODEL,
         google_api_key=GOOGLE_API_KEY,
         temperature=0,
+        thinking_budget=0,
     )
 
     # Step 3: Create the DataFrame Agent
@@ -121,6 +127,7 @@ def create_agent(df: pd.DataFrame) -> object:
         verbose=False,
         prefix=SYSTEM_PROMPT,
         allow_dangerous_code=True,
+        handle_parsing_errors=True,
     )
 
     return agent
