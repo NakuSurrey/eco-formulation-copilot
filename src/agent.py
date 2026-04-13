@@ -127,7 +127,6 @@ def create_agent(df: pd.DataFrame) -> object:
         verbose=False,
         prefix=SYSTEM_PROMPT,
         allow_dangerous_code=True,
-        handle_parsing_errors=True,
     )
 
     return agent

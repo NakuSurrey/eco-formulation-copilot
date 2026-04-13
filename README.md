@@ -32,7 +32,7 @@ Streamlit Front-End (app.py) captures the question
 LangChain DataFrame Agent (agent.py) receives the question
         |
         v
-Google Gemini LLM reads the question and writes Pandas code
+Google Gemini 2.5 Flash reads the question and writes Pandas code
         |
         v
 The agent executes that Pandas code against the DataFrame
@@ -82,7 +82,7 @@ The scientist never writes or sees any code. The LLM handles the translation fro
 | **Python 3.10** | Core language | Entire stack is Python-native |
 | **Streamlit** | Web framework | Full dashboard + chat UI in under 100 lines. No HTML/CSS/JS needed |
 | **LangChain** | Agent orchestration | Pre-built `create_pandas_dataframe_agent` for structured data querying |
-| **Google Gemini 2.0 Flash** | LLM | Free tier (30 req/min), no credit card, fast response times |
+| **Google Gemini 2.5 Flash** | LLM | Free tier with billing linked, fast response times, supports thinking control |
 | **Pandas** | Data manipulation | Lightweight Databricks substitute. Agent writes Pandas code to query data |
 | **Plotly** | Data visualisation | Interactive charts (hover, zoom, filter). Lightweight Power BI substitute |
 | **Docker** | Containerisation | Packages entire app into a portable image. Runs identically on any machine |

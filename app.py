@@ -26,7 +26,6 @@ import streamlit as st
 
 from src.config import APP_TITLE
 from src.data_loader import load_data
-from src.agent import create_agent, query_agent
 from src.charts import (
     build_scatter_chart,
     build_bar_chart,
@@ -40,12 +39,20 @@ from src.charts import (
 # This MUST be the first Streamlit command in the script.
 # It sets the browser tab title, the page icon, and the layout.
 # "wide" layout uses the full browser width instead of a narrow column.
+#
+# IMPORTANT: the agent import is placed AFTER this line because
+# langchain-google-genai v4+ triggers a Streamlit command during
+# its import chain. If imported before set_page_config(), Streamlit
+# crashes. Moving it here fixes that.
 # ============================================================
 st.set_page_config(
     page_title=APP_TITLE,
     page_icon="🧪",
     layout="wide",
 )
+
+# --- Lazy import: agent module loaded AFTER set_page_config ---
+from src.agent import create_agent, query_agent  # noqa: E402
 
 
 # ============================================================

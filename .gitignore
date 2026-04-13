@@ -37,4 +37,8 @@ Thumbs.db
 
 # --- Streamlit ---
 .streamlit/secrets.toml
-*.md
+
+# --- Internal docs (NEVER push to GitHub) ---
+# All reference files, error logs, and session notes live in docs/
+# Only README.md in the root directory gets pushed
+docs/
