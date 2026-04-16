@@ -1,6 +1,8 @@
 # Eco-Formulation Copilot
 
 [![CI](https://github.com/NakuSurrey/eco-formulation-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/NakuSurrey/eco-formulation-copilot/actions/workflows/ci.yml)
+[![Tests](https://img.shields.io/badge/tests-40%20passed-brightgreen.svg)](#testing--evaluation)
+[![Agent Accuracy](https://img.shields.io/badge/agent%20accuracy-90%25-brightgreen.svg)](#testing--evaluation)
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.41-red.svg)](https://streamlit.io/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
@@ -230,13 +232,89 @@ Tests that require a live Google API key are automatically skipped when the key 
 
 ---
 
+## Testing & Evaluation
+
+Two layers of quality control run on every change.
+
+**Layer 1 — Unit tests (20 tests, no API key needed)**
+
+20 fast-running tests verify the code behaviour — data loading, schema validation, prompt content, error handling. These run on every push in CI/CD. Below is a real run:
+
+```
+$ pytest tests/test_data_loader.py tests/test_agent.py -v
+
+tests/test_data_loader.py::TestLoadData::test_loads_successfully             PASSED
+tests/test_data_loader.py::TestLoadData::test_correct_row_count              PASSED
+tests/test_data_loader.py::TestLoadData::test_correct_column_count           PASSED
+tests/test_data_loader.py::TestLoadData::test_all_expected_columns_present   PASSED
+tests/test_data_loader.py::TestLoadData::test_no_missing_values              PASSED
+tests/test_data_loader.py::TestLoadData::test_file_not_found_raises_error    PASSED
+tests/test_data_loader.py::TestDataRanges::test_biodegradability_range       PASSED
+tests/test_data_loader.py::TestDataRanges::test_cleaning_efficacy_range      PASSED
+tests/test_data_loader.py::TestDataRanges::test_toxicity_range               PASSED
+tests/test_data_loader.py::TestDataRanges::test_cost_is_positive             PASSED
+tests/test_data_loader.py::TestDataRanges::test_concentration_range          PASSED
+tests/test_data_loader.py::TestValidateDataframe::test_empty_dataframe_raises_error   PASSED
+tests/test_data_loader.py::TestValidateDataframe::test_missing_column_raises_error    PASSED
+tests/test_agent.py::TestSystemPrompt::test_prompt_contains_role                      PASSED
+tests/test_agent.py::TestSystemPrompt::test_prompt_contains_anti_hallucination        PASSED
+tests/test_agent.py::TestSystemPrompt::test_prompt_contains_column_descriptions       PASSED
+tests/test_agent.py::TestSystemPrompt::test_prompt_forbids_invention                  PASSED
+tests/test_agent.py::TestQueryAgentErrorHandling::test_empty_string_returns_message   PASSED
+tests/test_agent.py::TestQueryAgentErrorHandling::test_whitespace_only_returns_message PASSED
+tests/test_agent.py::TestQueryAgentErrorHandling::test_none_agent_with_valid_question_returns_error  PASSED
+
+============================== 20 passed in 3.32s ===============================
+```
+
+**Layer 2 — Agent accuracy evaluation (20 questions, needs API key)**
+
+Unit tests prove the code runs. They do not prove the agent gives correct answers. So a second layer runs the agent against 20 real questions and checks every response against ground truth computed from the DataFrame using Pandas. The hybrid matcher handles free-text responses ("the answer is 87"), list answers, and tie-aware ranking.
+
+Below is a real run from the latest evaluation:
+
+```
+$ python -m eval.run_eval
+
+Eco-Formulation Copilot  —  Agent Evaluation Report
+Ground truth computed from the 500-row DataFrame (Pandas).
+Hybrid matcher: numeric extraction + keyword + ranking tie-aware.
+
+CATEGORY          PASSED / TOTAL       ACCURACY
+----------------------------------------------------
+counting          4 / 4                100.0 %
+aggregation       4 / 4                100.0 %
+filtering         3 / 3                100.0 %
+ranking           3 / 3                100.0 %
+grouping          2 / 3                 66.7 %
+lookup            2 / 3                 66.7 %
+----------------------------------------------------
+OVERALL           18 / 20               90.0 %
+```
+
+![Agent Evaluation Report](screenshot_evaluation.png)
+
+The 2 misses were intermittent LangChain ReAct parser crashes — not wrong answers. On every question where the agent returned a response, the answer matched the ground truth.
+
+**Why two layers matter** — unit tests caught a missing import that broke Streamlit; evaluation caught a ranking tie bug that unit tests could never see. Testing the code is not the same as testing the agent. This project does both.
+
+---
+
 ## CI/CD Pipeline
 
-Every push to `main` triggers three parallel jobs on GitHub Actions:
+Two separate workflows run on GitHub Actions.
+
+**On every push to `main`** — three parallel jobs (cheap, no API quota used):
 
 1. **Lint** — Runs `flake8` on `src/`, `tests/`, `eval/`, and `app.py` (max line length: 120 chars)
-2. **Test** — Runs `pytest` to execute all 40 tests (20 agent eval tests auto-skip without API key)
+2. **Test** — Runs `pytest` to execute the 20 unit tests (agent eval tests auto-skip — no API key in this job)
 3. **Docker** — Verifies the Docker image builds successfully
+
+**On a weekly schedule (Sunday 06:00 UTC)** — one job that uses the real API:
+
+4. **Agent Evaluation** — Runs the 20 accuracy tests against Google Gemini using `GOOGLE_API_KEY` from GitHub Secrets, then uploads the full accuracy report as a build artefact.
+
+The split exists because live evaluation burns Gemini quota on every run. Putting it on a weekly cron keeps per-push checks fast and free, while still giving a real live-eval run once a week.
 
 The badge at the top of this README shows the current status.
 
