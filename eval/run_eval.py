@@ -51,6 +51,7 @@ from src.data_loader import load_data
 from src.agent import create_agent, query_agent
 from eval.questions import EVAL_QUESTIONS
 from eval.matcher import check_match
+from eval.cache import save_result_json
 
 
 def run_evaluation() -> dict:
@@ -199,6 +200,13 @@ def run_evaluation() -> dict:
 if __name__ == "__main__":
     try:
         summary = run_evaluation()
+
+        # write the result to eval/last_run.json — this is what the
+        # Streamlit Evaluation tab reads on page-load
+        cache_path = save_result_json(summary)
+        print(f"CACHE: wrote {cache_path}")
+        print()
+
         # exit with code 1 if accuracy is below 70%
         # this lets CI/CD treat low accuracy as a failure
         if summary["accuracy"] < 70.0:

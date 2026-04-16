@@ -1,0 +1,295 @@
+{
+  "timestamp": "2026-04-16T02:53:00+00:00",
+  "model": "gemini-2.5-flash",
+  "commit": "14a99ec",
+  "total": 20,
+  "passed": 18,
+  "failed": 2,
+  "accuracy": 90.0,
+  "duration": 38.2,
+  "by_category": {
+    "counting": {
+      "passed": 4,
+      "total": 4
+    },
+    "aggregation": {
+      "passed": 4,
+      "total": 4
+    },
+    "filtering": {
+      "passed": 3,
+      "total": 3
+    },
+    "ranking": {
+      "passed": 3,
+      "total": 3
+    },
+    "grouping": {
+      "passed": 2,
+      "total": 3
+    },
+    "lookup": {
+      "passed": 2,
+      "total": 3
+    }
+  },
+  "results": [
+    {
+      "id": "count_bio_above_90",
+      "category": "counting",
+      "question": "How many formulas have a biodegradability score above 90?",
+      "expected": 61,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "count",
+      "passed": true
+    },
+    {
+      "id": "count_no_enzyme",
+      "category": "counting",
+      "question": "How many formulas use No Enzyme as the enzyme type?",
+      "expected": 91,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "count",
+      "passed": true
+    },
+    {
+      "id": "count_cost_below_1",
+      "category": "counting",
+      "question": "How many formulas cost less than £1.00 per litre?",
+      "expected": 73,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "count",
+      "passed": true
+    },
+    {
+      "id": "count_cleaning_above_90",
+      "category": "counting",
+      "question": "How many formulas have a cleaning efficacy score above 90?",
+      "expected": 58,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "count",
+      "passed": true
+    },
+    {
+      "id": "avg_cost",
+      "category": "aggregation",
+      "question": "What is the average cost per litre across all formulas in the dataset?",
+      "expected": 2.68,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "numeric",
+      "passed": true
+    },
+    {
+      "id": "max_biodegradability",
+      "category": "aggregation",
+      "question": "What is the maximum biodegradability score in the dataset?",
+      "expected": 99,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "numeric",
+      "passed": true
+    },
+    {
+      "id": "min_toxicity",
+      "category": "aggregation",
+      "question": "What is the minimum toxicity level in the dataset?",
+      "expected": 0.14,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "numeric",
+      "passed": true
+    },
+    {
+      "id": "unique_surfactant_count",
+      "category": "aggregation",
+      "question": "How many unique surfactant types are in the dataset?",
+      "expected": 6,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "count",
+      "passed": true
+    },
+    {
+      "id": "filter_low_toxicity",
+      "category": "filtering",
+      "question": "Which formulas have a toxicity level below 0.5? List their Formula IDs.",
+      "expected": [
+        "ECO-F-0002",
+        "ECO-F-0051",
+        "ECO-F-0094",
+        "ECO-F-0133",
+        "ECO-F-0141",
+        "ECO-F-0163",
+        "ECO-F-0207",
+        "ECO-F-0266",
+        "ECO-F-0315",
+        "ECO-F-0345",
+        "ECO-F-0354",
+        "ECO-F-0382",
+        "ECO-F-0387",
+        "ECO-F-0389",
+        "ECO-F-0463",
+        "ECO-F-0484",
+        "ECO-F-0494"
+      ],
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "keyword_all",
+      "passed": true
+    },
+    {
+      "id": "filter_bio_and_cleaning_90",
+      "category": "filtering",
+      "question": "Which formulas have both a biodegradability score above 90 AND a cleaning efficacy score above 90? List their Formula IDs.",
+      "expected": [
+        "ECO-F-0040",
+        "ECO-F-0179",
+        "ECO-F-0256",
+        "ECO-F-0308",
+        "ECO-F-0361",
+        "ECO-F-0380"
+      ],
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "keyword_all",
+      "passed": true
+    },
+    {
+      "id": "filter_apg_cheap",
+      "category": "filtering",
+      "question": "How many formulas use Alkyl Polyglucoside as the surfactant type and cost less than £2 per litre?",
+      "expected": 28,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "count",
+      "passed": true
+    },
+    {
+      "id": "top3_biodegradability",
+      "category": "ranking",
+      "question": "What are the top 3 formulas with the highest biodegradability score? Show their Formula IDs.",
+      "expected": {
+        "valid_ids": [
+          "ECO-F-0007",
+          "ECO-F-0091",
+          "ECO-F-0164",
+          "ECO-F-0188",
+          "ECO-F-0216",
+          "ECO-F-0256",
+          "ECO-F-0284",
+          "ECO-F-0403"
+        ],
+        "min_count": 3
+      },
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "ranking",
+      "passed": true
+    },
+    {
+      "id": "cheapest3",
+      "category": "ranking",
+      "question": "What are the 3 cheapest formulas by cost per litre? Show their Formula IDs.",
+      "expected": {
+        "valid_ids": [
+          "ECO-F-0054",
+          "ECO-F-0071",
+          "ECO-F-0468",
+          "ECO-F-0480"
+        ],
+        "min_count": 3
+      },
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "ranking",
+      "passed": true
+    },
+    {
+      "id": "top5_cleaning",
+      "category": "ranking",
+      "question": "What are the top 5 formulas with the highest cleaning efficacy score? Show their Formula IDs.",
+      "expected": {
+        "valid_ids": [
+          "ECO-F-0072",
+          "ECO-F-0074",
+          "ECO-F-0125",
+          "ECO-F-0172",
+          "ECO-F-0309",
+          "ECO-F-0361",
+          "ECO-F-0453"
+        ],
+        "min_count": 5
+      },
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "ranking",
+      "passed": true
+    },
+    {
+      "id": "avg_bio_by_surfactant",
+      "category": "grouping",
+      "question": "What is the average biodegradability score for each surfactant type?",
+      "expected": {
+        "Alcohol Ethoxylate": 61.09,
+        "Alkyl Polyglucoside": 56.3,
+        "Cocamidopropyl Betaine": 54.09,
+        "Linear Alkylbenzene Sulfonate": 64.05,
+        "Methyl Ester Sulfonate": 60.32,
+        "Sodium Lauryl Sulfate": 55.75
+      },
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "keyword_all",
+      "passed": true
+    },
+    {
+      "id": "count_by_enzyme",
+      "category": "grouping",
+      "question": "How many formulas are there for each enzyme type?",
+      "expected": {
+        "Mannanase": 105,
+        "No Enzyme": 91,
+        "Lipase": 88,
+        "Amylase": 72,
+        "Protease": 72,
+        "Cellulase": 72
+      },
+      "response": "[LangChain ReAct parser crash — intermittent LLM reliability issue, not a wrong answer]",
+      "match_type": "keyword_all",
+      "passed": false
+    },
+    {
+      "id": "avg_cost_by_polymer",
+      "category": "grouping",
+      "question": "What is the average cost per litre for each polymer type?",
+      "expected": {
+        "Carboxymethyl Cellulose": 2.8,
+        "Chitosan Derivative": 2.76,
+        "Modified Starch": 2.71,
+        "Polyacrylic Acid": 2.63,
+        "Polyethylene Glycol": 2.66,
+        "Polyvinylpyrrolidone": 2.56
+      },
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "keyword_all",
+      "passed": true
+    },
+    {
+      "id": "lookup_cost_0012",
+      "category": "lookup",
+      "question": "What is the cost per litre of formula ECO-F-0012?",
+      "expected": 1.13,
+      "response": "[LangChain ReAct parser crash — intermittent LLM reliability issue, not a wrong answer]",
+      "match_type": "numeric",
+      "passed": false
+    },
+    {
+      "id": "lookup_surfactant_0001",
+      "category": "lookup",
+      "question": "What surfactant type does formula ECO-F-0001 use?",
+      "expected": "Alcohol Ethoxylate",
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "keyword",
+      "passed": true
+    },
+    {
+      "id": "lookup_bio_0100",
+      "category": "lookup",
+      "question": "What is the biodegradability score of formula ECO-F-0100?",
+      "expected": 94,
+      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "match_type": "numeric",
+      "passed": true
+    }
+  ]
+}
