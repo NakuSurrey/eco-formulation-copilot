@@ -59,7 +59,7 @@ jobs:
 
       - name: Run flake8
         run: |
-          flake8 src/ tests/ app.py \
+          flake8 src/ tests/ eval/ app.py \
             --max-line-length=120 \
             --exclude=__pycache__,venv \
             --count \
