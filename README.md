@@ -10,6 +10,8 @@
 
 A proof-of-concept **Agentic AI** application built to accelerate high-throughput R&D data querying for sustainable chemical products. Scientists ask questions about chemical formulations in plain English. The AI agent translates the question into Pandas code, executes it against a structured dataset, and returns the answer — no coding required.
 
+Includes a 20-question evaluation framework that systematically tests agent accuracy against ground-truth answers — achieving **90% accuracy** across counting, aggregation, filtering, ranking, grouping, and lookup queries.
+
 Built specifically to demonstrate the technical skills required for the **P&G Newcastle Innovation Centre — Software Development Industrial Placement 2026**.
 
 ---
@@ -58,13 +60,15 @@ The scientist never writes or sees any code. The LLM handles the translation fro
 
 **Anti-Hallucination Safeguards** — The AI agent is prompt-engineered to only answer from the dataset. If the data does not contain the answer, it responds with "Data not available" instead of inventing information.
 
+**Agent Evaluation Framework** — 20 pre-defined questions with ground-truth answers computed from the DataFrame using Pandas. A hybrid matcher (numeric extraction + keyword matching) verifies agent responses. Achieves 90% accuracy across 6 question categories. Run `python -m eval.run_eval` for a full accuracy report.
+
 **Key Metrics Row** — Four summary statistics (Total Formulas, Avg Biodegradability, Avg Cleaning Efficacy, Avg Cost/Litre) appear at the top of the dashboard for an instant snapshot.
 
 ---
 
 ## Why I Built It
 
-The P&G Newcastle Innovation Centre placement asks for Databricks, Power BI, Microsoft Copilot Studio, and Agentic AI. Instead of listing these as buzzwords on a CV, I built a working app that proves I can use equivalent tools. Pandas replaces Databricks for data pipelines. Plotly replaces Power BI for dashboards. LangChain with Google Gemini replaces Copilot Studio for agentic AI. The dataset is synthetic but the architecture is real — a scientist types a question in English, an AI agent writes and runs Pandas code, and the answer comes back in seconds. Every piece was built from scratch, tested with 20 automated tests, deployed to a live server, and pushed through a CI/CD pipeline. This is not a tutorial clone. Every decision in this codebase has a reason.
+The P&G Newcastle Innovation Centre placement asks for Databricks, Power BI, Microsoft Copilot Studio, and Agentic AI. Instead of listing these as buzzwords on a CV, I built a working app that proves I can use equivalent tools. Pandas replaces Databricks for data pipelines. Plotly replaces Power BI for dashboards. LangChain with Google Gemini replaces Copilot Studio for agentic AI. The dataset is synthetic but the architecture is real — a scientist types a question in English, an AI agent writes and runs Pandas code, and the answer comes back in seconds. Every piece was built from scratch, tested with 40 automated tests (including a 20-question agent evaluation suite), deployed to a live server, and pushed through a CI/CD pipeline. This is not a tutorial clone. Every decision in this codebase has a reason.
 
 ---
 
@@ -76,7 +80,7 @@ The P&G Newcastle Innovation Centre placement asks for Databricks, Power BI, Mic
 | Power BI (interactive dashboards & analytics) | Streamlit + Plotly (interactive, hoverable charts) |
 | Microsoft Copilot Studio & Agentic AI | LangChain DataFrame Agent + Google Gemini LLM |
 | Data engineering, analytics & AI development | `data_loader.py` + `generate_data.py` + `agent.py` |
-| Testing, troubleshooting & optimisation | pytest (20 automated tests) + flake8 linting |
+| Testing, troubleshooting & optimisation | pytest (40 automated tests) + agent evaluation framework (90% accuracy) + flake8 linting |
 | CI/CD & DevOps workflows | GitHub Actions (lint + test + Docker build on every push) |
 
 ---
@@ -93,7 +97,7 @@ The P&G Newcastle Innovation Centre placement asks for Databricks, Power BI, Mic
 | **Plotly** | Data visualisation | Interactive charts (hover, zoom, filter). Lightweight Power BI substitute |
 | **Docker** | Containerisation | Packages entire app into a portable image. Runs identically on any machine |
 | **GitHub Actions** | CI/CD | Automated lint + test + Docker build on every push |
-| **pytest** | Testing | 20 automated tests covering data loading, agent behaviour, and error handling |
+| **pytest** | Testing | 40 automated tests: data loading, agent behaviour, error handling, and agent accuracy evaluation |
 | **flake8** | Code quality | Enforces consistent code style across the project |
 
 ---
@@ -131,7 +135,13 @@ eco-formulation-copilot/
 ├── tests/
 │   ├── __init__.py           — Makes tests/ a Python package
 │   ├── test_data_loader.py   — 13 tests for data loading and validation
-│   └── test_agent.py         — 7 tests for agent prompt and error handling
+│   ├── test_agent.py         — 7 tests for agent prompt and error handling
+│   └── test_agent_eval.py    — 20 parameterized agent accuracy tests
+├── eval/
+│   ├── __init__.py           — Makes eval/ a Python package
+│   ├── questions.py          — 20 evaluation questions with Pandas compute functions
+│   ├── matcher.py            — Hybrid matching (numeric extraction + keyword)
+│   └── run_eval.py           — Standalone accuracy report script
 ├── data/
 │   ├── generate_data.py      — Script to generate the synthetic dataset
 │   └── formulations.csv      — The 500-row dataset
@@ -197,20 +207,26 @@ The app opens at `http://localhost:8501`.
 ## Running Tests
 
 ```bash
-# Run all tests
+# Run all 40 tests
 pytest tests/ -v
 
-# Run only data loader tests
+# Run only data loader tests (13 tests)
 pytest tests/test_data_loader.py -v
 
-# Run only agent tests
+# Run only agent tests (7 tests)
 pytest tests/test_agent.py -v
 
+# Run only agent evaluation tests (20 tests, needs API key)
+pytest tests/test_agent_eval.py -v
+
+# Run the standalone evaluation report (needs API key)
+python -m eval.run_eval
+
 # Run linting
-flake8 src/ tests/ app.py --max-line-length=120
+flake8 src/ tests/ eval/ app.py --max-line-length=120
 ```
 
-Tests that require a live Google API key are automatically skipped when the key is not present. This allows CI/CD to run the full test suite without exposing secrets.
+Tests that require a live Google API key are automatically skipped when the key is not present. This allows CI/CD to run the full test suite without exposing secrets. The 20 evaluation tests run locally when the API key is set and verify the agent gives correct answers across 6 question categories.
 
 ---
 
@@ -218,8 +234,8 @@ Tests that require a live Google API key are automatically skipped when the key 
 
 Every push to `main` triggers three parallel jobs on GitHub Actions:
 
-1. **Lint** — Runs `flake8` to check code style (max line length: 120 chars)
-2. **Test** — Runs `pytest` to execute all 20 unit tests
+1. **Lint** — Runs `flake8` on `src/`, `tests/`, `eval/`, and `app.py` (max line length: 120 chars)
+2. **Test** — Runs `pytest` to execute all 40 tests (20 agent eval tests auto-skip without API key)
 3. **Docker** — Verifies the Docker image builds successfully
 
 The badge at the top of this README shows the current status.
@@ -246,6 +262,8 @@ The badge at the top of this README shows the current status.
 
 - **Lazy import for agent module** — `langchain-google-genai` v4+ triggers Streamlit commands during import. Moving the import to after `set_page_config()` prevents a crash. This is a real-world packaging issue, not a textbook pattern.
 
+- **Agent evaluation with ground-truth answers over manual testing** — Built a 20-question evaluation suite where correct answers are computed from the DataFrame using Pandas at runtime, not hardcoded. A hybrid matcher extracts numbers from free-text responses and does keyword matching for text answers. This catches accuracy regressions that unit tests cannot detect — unit tests verify the code runs, evaluation verifies the answers are right.
+
 ---
 
 ## What I Learned
@@ -257,6 +275,8 @@ The badge at the top of this README shows the current status.
 - Always test with raw `curl` before blaming application code — this saved hours of debugging by proving the API key and model were the problem, not the agent
 - Error handling at the application level is more reliable than library-level flags — wrapping `agent.invoke()` in `try/except` survived a library upgrade that removed `handle_parsing_errors`
 - CI/CD catches things local testing misses — flake8 in GitHub Actions caught an unused import that worked fine locally
+- AI agents need evaluation, not just unit tests — the agent can pass every code-level test and still give wrong answers to real questions. A separate evaluation framework that checks answer correctness against ground truth is the only way to catch this
+- Ranking queries need tie-aware evaluation — when multiple records share the same score, any valid subset is a correct answer. Hardcoded expected values fail on ties
 
 ---
 
