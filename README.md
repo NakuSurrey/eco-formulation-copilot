@@ -1,6 +1,7 @@
 # Eco-Formulation Copilot
 
 [![CI](https://github.com/NakuSurrey/eco-formulation-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/NakuSurrey/eco-formulation-copilot/actions/workflows/ci.yml)
+[![Weekly Evaluation](https://github.com/NakuSurrey/eco-formulation-copilot/actions/workflows/eval.yml/badge.svg)](https://github.com/NakuSurrey/eco-formulation-copilot/actions/workflows/eval.yml)
 [![Tests](https://img.shields.io/badge/tests-40%20passed-brightgreen.svg)](#testing--evaluation)
 [![Agent Accuracy](https://img.shields.io/badge/agent%20accuracy-90%25-brightgreen.svg)](#testing--evaluation)
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/downloads/)
@@ -312,11 +313,11 @@ Two separate workflows run on GitHub Actions.
 
 **On a weekly schedule (Sunday 06:00 UTC)** — one job that uses the real API:
 
-4. **Agent Evaluation** — Runs the 20 accuracy tests against Google Gemini using `GOOGLE_API_KEY` from GitHub Secrets, then uploads the full accuracy report as a build artefact.
+4. **Agent Evaluation** (`.github/workflows/eval.yml`) — Runs the 20 accuracy tests against Google Gemini using `GOOGLE_API_KEY` from GitHub Secrets, fails the job if accuracy drops below 70 %, uploads the full report as a workflow artefact, and auto-commits `eval/last_run.json` back to `main` with `[skip ci]` so the live Streamlit **Evaluation** tab always reflects the latest real run.
 
-The split exists because live evaluation burns Gemini quota on every run. Putting it on a weekly cron keeps per-push checks fast and free, while still giving a real live-eval run once a week.
+The split exists because live evaluation burns Gemini quota on every run. Putting it on a weekly cron keeps per-push checks fast and free, while still giving a real live-eval run once a week. Concurrency is set to `cancel-in-progress` — a new manual run during a cron kills the older one so API quota never doubles up.
 
-The badge at the top of this README shows the current status.
+Both workflow badges at the top of this README reflect the current status — green CI means code is clean, green Weekly Evaluation means the agent stayed above the 70 % floor on its last run.
 
 ---
 

@@ -1,0 +1,127 @@
+# ============================================================
+# Eco-Formulation Copilot — Weekly Agent Evaluation
+# ============================================================
+# Separate from ci.yml on purpose.
+# ci.yml runs on every push — cheap, no API quota used.
+# This workflow uses the real Gemini API, so it only runs
+# once a week on a cron. Manual trigger is kept for ad-hoc
+# re-runs after a deployment.
+#
+# WHAT IT DOES:
+#   1. checks out the repo
+#   2. installs Python 3.10 + requirements.txt
+#   3. runs `python -m eval.run_eval` against the live API
+#   4. fails the job red if accuracy < 70 %
+#   5. uploads eval/last_run.json as a workflow artefact
+#   6. commits eval/last_run.json back to main with [skip ci]
+#      — the live Streamlit Evaluation tab reads this file
+#
+# PRE-REQUISITE:
+#   GOOGLE_API_KEY must be set under
+#   repo → Settings → Secrets and variables → Actions.
+#   MODEL_NAME is optional — defaults to gemini-2.5-flash.
+# ============================================================
+
+name: Weekly Evaluation
+
+on:
+  # Sunday 06:00 UTC — outside typical working hours, quota
+  # resets are easier to reason about at the start of the day.
+  schedule:
+    - cron: "0 6 * * 0"
+
+  # manual trigger — useful right after a deploy, or to re-verify
+  # a change without waiting for the cron
+  workflow_dispatch:
+
+# cancel-in-progress: a newer run kills the older one.
+# stops double quota burn when a manual run fires during the cron.
+concurrency:
+  group: weekly-eval
+  cancel-in-progress: true
+
+# contents:write — needed so the auto-commit step at the end
+# can push eval/last_run.json back to main
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    name: Run 20-question agent evaluation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 so the auto-commit step can push cleanly
+          fetch-depth: 0
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run agent evaluation
+        env:
+          # GOOGLE_API_KEY — secret, must be set in repo Settings
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          # MODEL_NAME — optional, falls back to gemini-2.5-flash in code
+          MODEL_NAME: ${{ secrets.MODEL_NAME }}
+          # GITHUB_SHA — picked up by eval/cache.py for the commit field
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          python -m eval.run_eval | tee eval_output.log
+
+      - name: Check accuracy threshold
+        # reads the JSON written by the previous step and fails the
+        # job red if the agent dropped below the 70 % floor
+        run: |
+          python -c "
+          import json, sys
+          data = json.load(open('eval/last_run.json'))
+          acc = float(data.get('accuracy', 0))
+          print(f'Accuracy this run: {acc}%')
+          if acc < 70:
+              print(f'FAIL — accuracy {acc}% is below the 70% floor')
+              sys.exit(1)
+          print('PASS — accuracy is above the 70% floor')
+          "
+
+      - name: Upload evaluation artefacts
+        # artefact stays available for 30 days — useful for
+        # diffing two runs if a regression hits
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-report-${{ github.run_number }}
+          path: |
+            eval/last_run.json
+            eval_output.log
+          retention-days: 30
+
+      - name: Commit last_run.json back to main
+        # only runs on main — safety net in case someone fires the
+        # workflow from a feature branch manually
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # standard github-actions bot identity for auto-commits
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # nothing to do if the eval did not actually change the file
+          if git diff --quiet eval/last_run.json; then
+            echo "no change in eval/last_run.json — skipping commit"
+            exit 0
+          fi
+
+          git add eval/last_run.json
+          # [skip ci] in the message tells ci.yml to ignore this commit
+          # otherwise every weekly eval triggers a pointless ci run
+          git commit -m "chore(eval): weekly run $(date -u +%Y-%m-%d) [skip ci]"
+          git push origin main
