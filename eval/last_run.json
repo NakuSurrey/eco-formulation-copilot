@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-16T02:53:00+00:00",
-  "model": "gemini-2.5-flash",
-  "commit": "14a99ec",
+  "timestamp": "2026-04-16T19:41:16+00:00",
+  "model": "",
+  "commit": "049795dd017214b4752e59c7b4054506ecd2eddb",
   "total": 20,
-  "passed": 18,
-  "failed": 2,
-  "accuracy": 90.0,
-  "duration": 38.2,
+  "passed": 17,
+  "failed": 3,
+  "accuracy": 85.0,
+  "duration": 38.1,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -17,19 +17,19 @@
       "total": 4
     },
     "filtering": {
-      "passed": 3,
+      "passed": 2,
       "total": 3
     },
     "ranking": {
-      "passed": 3,
+      "passed": 1,
       "total": 3
     },
     "grouping": {
-      "passed": 2,
+      "passed": 3,
       "total": 3
     },
     "lookup": {
-      "passed": 2,
+      "passed": 3,
       "total": 3
     }
   },
@@ -39,7 +39,7 @@
       "category": "counting",
       "question": "How many formulas have a biodegradability score above 90?",
       "expected": 61,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "61",
       "match_type": "count",
       "passed": true
     },
@@ -48,7 +48,7 @@
       "category": "counting",
       "question": "How many formulas use No Enzyme as the enzyme type?",
       "expected": 91,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "91 formulas use No Enzyme as the enzyme type.",
       "match_type": "count",
       "passed": true
     },
@@ -57,7 +57,7 @@
       "category": "counting",
       "question": "How many formulas cost less than £1.00 per litre?",
       "expected": 73,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "73 formulas cost less than £1.00 per litre.",
       "match_type": "count",
       "passed": true
     },
@@ -66,7 +66,7 @@
       "category": "counting",
       "question": "How many formulas have a cleaning efficacy score above 90?",
       "expected": 58,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "58",
       "match_type": "count",
       "passed": true
     },
@@ -75,7 +75,7 @@
       "category": "aggregation",
       "question": "What is the average cost per litre across all formulas in the dataset?",
       "expected": 2.68,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "The average cost per litre across all formulas is 2.67916 £.",
       "match_type": "numeric",
       "passed": true
     },
@@ -84,7 +84,7 @@
       "category": "aggregation",
       "question": "What is the maximum biodegradability score in the dataset?",
       "expected": 99,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "99",
       "match_type": "numeric",
       "passed": true
     },
@@ -93,7 +93,7 @@
       "category": "aggregation",
       "question": "What is the minimum toxicity level in the dataset?",
       "expected": 0.14,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "0.14",
       "match_type": "numeric",
       "passed": true
     },
@@ -102,7 +102,7 @@
       "category": "aggregation",
       "question": "How many unique surfactant types are in the dataset?",
       "expected": 6,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "6 unique surfactant types.",
       "match_type": "count",
       "passed": true
     },
@@ -129,9 +129,9 @@
         "ECO-F-0484",
         "ECO-F-0494"
       ],
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
       "match_type": "keyword_all",
-      "passed": true
+      "passed": false
     },
     {
       "id": "filter_bio_and_cleaning_90",
@@ -145,7 +145,7 @@
         "ECO-F-0361",
         "ECO-F-0380"
       ],
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "| Formula_ID   |\n|:-------------|\n| ECO-F-0040   |\n| ECO-F-0179   |\n| ECO-F-0256   |\n| ECO-F-0308   |\n| ECO-F-0361   |\n| ECO-F-0380   |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -154,7 +154,7 @@
       "category": "filtering",
       "question": "How many formulas use Alkyl Polyglucoside as the surfactant type and cost less than £2 per litre?",
       "expected": 28,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "28 formulas use Alkyl Polyglucoside as the surfactant type and cost less than £2 per litre.",
       "match_type": "count",
       "passed": true
     },
@@ -175,9 +175,9 @@
         ],
         "min_count": 3
       },
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
       "match_type": "ranking",
-      "passed": true
+      "passed": false
     },
     {
       "id": "cheapest3",
@@ -192,7 +192,7 @@
         ],
         "min_count": 3
       },
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "| Formula_ID   |   Cost_Per_Litre_GBP |\n|:-------------|---------------------:|\n| ECO-F-0054   |                 0.36 |\n| ECO-F-0480   |                 0.37 |\n| ECO-F-0468   |                 0.38 |",
       "match_type": "ranking",
       "passed": true
     },
@@ -212,9 +212,9 @@
         ],
         "min_count": 5
       },
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
       "match_type": "ranking",
-      "passed": true
+      "passed": false
     },
     {
       "id": "avg_bio_by_surfactant",
@@ -228,7 +228,7 @@
         "Methyl Ester Sulfonate": 60.32,
         "Sodium Lauryl Sulfate": 55.75
       },
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "| Surfactant_Type | Biodegradability_Score |\n|:------------------------------|-------------------------:|\n| Alcohol Ethoxylate | 61.0899 |\n| Alkyl Polyglucoside | 56.3 |\n| Cocamidopropyl Betaine | 54.0864 |\n| Linear Alkylbenzene Sulfonate | 64.0488 |\n| Methyl Ester Sulfonate | 60.3165 |\n| Sodium Lauryl Sulfate | 55.7528 |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -244,9 +244,9 @@
         "Protease": 72,
         "Cellulase": 72
       },
-      "response": "[LangChain ReAct parser crash — intermittent LLM reliability issue, not a wrong answer]",
+      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72      |\n| Protease      | 72      |\n| Cellulase     | 72     |",
       "match_type": "keyword_all",
-      "passed": false
+      "passed": true
     },
     {
       "id": "avg_cost_by_polymer",
@@ -260,7 +260,7 @@
         "Polyethylene Glycol": 2.66,
         "Polyvinylpyrrolidone": 2.56
       },
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|---------------------:|\n| Carboxymethyl Cellulose |              2.79613 |\n| Chitosan Derivative     |              2.76388 |\n| Modified Starch         |              2.71039 |\n| Polyacrylic Acid        |              2.63013 |\n| Polyethylene Glycol     |              2.65543 |\n| Polyvinylpyrrolidone    |              2.55828 |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -269,16 +269,16 @@
       "category": "lookup",
       "question": "What is the cost per litre of formula ECO-F-0012?",
       "expected": 1.13,
-      "response": "[LangChain ReAct parser crash — intermittent LLM reliability issue, not a wrong answer]",
+      "response": "1.13 £",
       "match_type": "numeric",
-      "passed": false
+      "passed": true
     },
     {
       "id": "lookup_surfactant_0001",
       "category": "lookup",
       "question": "What surfactant type does formula ECO-F-0001 use?",
       "expected": "Alcohol Ethoxylate",
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "Alcohol Ethoxylate",
       "match_type": "keyword",
       "passed": true
     },
@@ -287,7 +287,7 @@
       "category": "lookup",
       "question": "What is the biodegradability score of formula ECO-F-0100?",
       "expected": 94,
-      "response": "[cached from Session 9 90% run — click 'Run evaluation now' for a fresh live response]",
+      "response": "94",
       "match_type": "numeric",
       "passed": true
     }
