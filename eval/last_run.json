@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-26T07:16:51+00:00",
+  "timestamp": "2026-05-03T07:46:50+00:00",
   "model": "",
-  "commit": "6bf47f1cec7248f26fcaa1388799cd0a26d1fc0c",
+  "commit": "3b48c344335b8ea61a6258de8a3d1c6d5ab87feb",
   "total": 20,
-  "passed": 16,
-  "failed": 4,
-  "accuracy": 80.0,
-  "duration": 39.4,
+  "passed": 17,
+  "failed": 3,
+  "accuracy": 85.0,
+  "duration": 34.5,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -21,7 +21,7 @@
       "total": 3
     },
     "ranking": {
-      "passed": 0,
+      "passed": 2,
       "total": 3
     },
     "grouping": {
@@ -29,7 +29,7 @@
       "total": 3
     },
     "lookup": {
-      "passed": 3,
+      "passed": 2,
       "total": 3
     }
   },
@@ -192,9 +192,9 @@
         ],
         "min_count": 3
       },
-      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
+      "response": "| Formula_ID   |   Cost_Per_Litre_GBP |\n|:-------------|---------------------:|\n| ECO-F-0054   |                 0.36 |\n| ECO-F-0480   |                 0.37 |\n| ECO-F-0468   |                 0.38 |",
       "match_type": "ranking",
-      "passed": false
+      "passed": true
     },
     {
       "id": "top5_cleaning",
@@ -212,9 +212,9 @@
         ],
         "min_count": 5
       },
-      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
+      "response": "The top 5 formulas with the highest Cleaning Efficacy Score are:\n\n| Formula_ID   |   Cleaning_Efficacy_Score |\n|:-------------|--------------------------:|\n| ECO-F-0453   |                        98 |\n| ECO-F-0309   |                        98 |\n| ECO-F-0074   |                        98 |\n| ECO-F-0172   |                        98 |\n| ECO-F-0125   |                        98 |",
       "match_type": "ranking",
-      "passed": false
+      "passed": true
     },
     {
       "id": "avg_bio_by_surfactant",
@@ -260,7 +260,7 @@
         "Polyethylene Glycol": 2.66,
         "Polyvinylpyrrolidone": 2.56
       },
-      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|-------------------:|\n| Carboxymethyl Cellulose | 2.796133           |\n| Chitosan Derivative     | 2.763875           |\n| Modified Starch         | 2.710395           |\n| Polyacrylic Acid        | 2.630132           |\n| Polyethylene Glycol     | 2.655426           |\n| Polyvinylpyrrolidone    | 2.558283           |",
+      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|---------------------:|\n| Carboxymethyl Cellulose |              2.79613 |\n| Chitosan Derivative     |              2.76388 |\n| Modified Starch         |              2.71039 |\n| Polyacrylic Acid        |              2.63013 |\n| Polyethylene Glycol     |              2.65543 |\n| Polyvinylpyrrolidone    |              2.55828 |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -269,9 +269,9 @@
       "category": "lookup",
       "question": "What is the cost per litre of formula ECO-F-0012?",
       "expected": 1.13,
-      "response": "1.13 £",
+      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
       "match_type": "numeric",
-      "passed": true
+      "passed": false
     },
     {
       "id": "lookup_surfactant_0001",
