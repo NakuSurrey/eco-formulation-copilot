@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-31T08:34:04+00:00",
+  "timestamp": "2026-06-07T08:44:01+00:00",
   "model": "",
-  "commit": "f41dc0413f53e90417a8f5bfb07177137b259268",
+  "commit": "c02d3e21afad6127794f240a602ffa378633800e",
   "total": 20,
   "passed": 16,
   "failed": 4,
   "accuracy": 80.0,
-  "duration": 31.4,
+  "duration": 33.5,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -244,7 +244,7 @@
         "Protease": 72,
         "Cellulase": 72
       },
-      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72      |\n| Protease      | 72      |\n| Cellulase     | 72     |",
+      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72     |\n| Protease      | 72      |\n| Cellulase     | 72      |",
       "match_type": "keyword_all",
       "passed": true
     },
