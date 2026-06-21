@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-14T09:01:22+00:00",
+  "timestamp": "2026-06-21T09:34:25+00:00",
   "model": "",
-  "commit": "a6cc115e574fdc7d57e576032e047e35b000b113",
+  "commit": "d5a5bfd30f113b7cfff7724947f98ff1d00463e5",
   "total": 20,
   "passed": 16,
   "failed": 4,
   "accuracy": 80.0,
-  "duration": 38.0,
+  "duration": 28.8,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -21,7 +21,7 @@
       "total": 3
     },
     "ranking": {
-      "passed": 1,
+      "passed": 0,
       "total": 3
     },
     "grouping": {
@@ -29,7 +29,7 @@
       "total": 3
     },
     "lookup": {
-      "passed": 2,
+      "passed": 3,
       "total": 3
     }
   },
@@ -192,9 +192,9 @@
         ],
         "min_count": 3
       },
-      "response": "| Formula_ID   |   Cost_Per_Litre_GBP |\n|:-------------|---------------------:|\n| ECO-F-0054   |                 0.36 |\n| ECO-F-0480   |                 0.37 |\n| ECO-F-0468   |                 0.38 |",
+      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
       "match_type": "ranking",
-      "passed": true
+      "passed": false
     },
     {
       "id": "top5_cleaning",
@@ -244,7 +244,7 @@
         "Protease": 72,
         "Cellulase": 72
       },
-      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72      |\n| Protease      | 72      |\n| Cellulase     | 72     |",
+      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72     |\n| Protease      | 72      |\n| Cellulase     | 72      |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -269,9 +269,9 @@
       "category": "lookup",
       "question": "What is the cost per litre of formula ECO-F-0012?",
       "expected": 1.13,
-      "response": "An error occurred while querying the data: ServerError. Please check your API key and internet connection, or try a simpler question.",
+      "response": "1.13 £",
       "match_type": "numeric",
-      "passed": false
+      "passed": true
     },
     {
       "id": "lookup_surfactant_0001",
