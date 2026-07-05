@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-28T08:39:35+00:00",
+  "timestamp": "2026-07-05T08:39:30+00:00",
   "model": "",
-  "commit": "ea5370cf057a21a25369456bb1e1e12daf0aab71",
+  "commit": "e68a5e372abf5580749b97acfd1ca6476dd4d15c",
   "total": 20,
   "passed": 16,
   "failed": 4,
   "accuracy": 80.0,
-  "duration": 27.9,
+  "duration": 27.3,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -244,7 +244,7 @@
         "Protease": 72,
         "Cellulase": 72
       },
-      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72     |\n| Protease      | 72      |\n| Cellulase     | 72      |",
+      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72      |\n| Protease      | 72      |\n| Cellulase     | 72     |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -260,7 +260,7 @@
         "Polyethylene Glycol": 2.66,
         "Polyvinylpyrrolidone": 2.56
       },
-      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|---------------------:|\n| Carboxymethyl Cellulose |              2.79613 |\n| Chitosan Derivative     |              2.76388 |\n| Modified Starch         |              2.71039 |\n| Polyacrylic Acid        |              2.63013 |\n| Polyethylene Glycol     |              2.65543 |\n| Polyvinylpyrrolidone    |              2.55828 |",
+      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|-------------------:|\n| Carboxymethyl Cellulose | 2.796133           |\n| Chitosan Derivative     | 2.763875           |\n| Modified Starch         | 2.710395           |\n| Polyacrylic Acid        | 2.630132           |\n| Polyethylene Glycol     | 2.655426           |\n| Polyvinylpyrrolidone    | 2.558283           |",
       "match_type": "keyword_all",
       "passed": true
     },
