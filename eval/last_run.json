@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-12T07:57:57+00:00",
+  "timestamp": "2026-07-19T07:57:02+00:00",
   "model": "",
-  "commit": "21b37e2bb987c58705116f3e8dff0786427bf027",
+  "commit": "6d4781e8632319f8bbb432f40341d3ba851f5342",
   "total": 20,
-  "passed": 17,
-  "failed": 3,
-  "accuracy": 85.0,
-  "duration": 27.1,
+  "passed": 16,
+  "failed": 4,
+  "accuracy": 80.0,
+  "duration": 26.5,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -21,7 +21,7 @@
       "total": 3
     },
     "ranking": {
-      "passed": 1,
+      "passed": 0,
       "total": 3
     },
     "grouping": {
@@ -192,9 +192,9 @@
         ],
         "min_count": 3
       },
-      "response": "| Formula_ID   |   Cost_Per_Litre_GBP |\n|:-------------|---------------------:|\n| ECO-F-0054   |                 0.36 |\n| ECO-F-0480   |                 0.37 |\n| ECO-F-0468   |                 0.38 |",
+      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
       "match_type": "ranking",
-      "passed": true
+      "passed": false
     },
     {
       "id": "top5_cleaning",
@@ -244,7 +244,7 @@
         "Protease": 72,
         "Cellulase": 72
       },
-      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72      |\n| Protease      | 72      |\n| Cellulase     | 72     |",
+      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72     |\n| Protease      | 72      |\n| Cellulase     | 72      |",
       "match_type": "keyword_all",
       "passed": true
     },
