@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-19T07:57:02+00:00",
+  "timestamp": "2026-07-26T08:06:31+00:00",
   "model": "",
-  "commit": "6d4781e8632319f8bbb432f40341d3ba851f5342",
+  "commit": "4a7985aec050f72c50087cbfd2c03fb5ecbc5917",
   "total": 20,
   "passed": 16,
   "failed": 4,
   "accuracy": 80.0,
-  "duration": 26.5,
+  "duration": 28.7,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -93,7 +93,7 @@
       "category": "aggregation",
       "question": "What is the minimum toxicity level in the dataset?",
       "expected": 0.14,
-      "response": "The minimum toxicity level in the dataset is 0.14.",
+      "response": "0.14",
       "match_type": "numeric",
       "passed": true
     },
