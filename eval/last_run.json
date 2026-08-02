@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-26T08:06:31+00:00",
+  "timestamp": "2026-08-02T08:03:30+00:00",
   "model": "",
-  "commit": "4a7985aec050f72c50087cbfd2c03fb5ecbc5917",
+  "commit": "bc99b68f269cd335d246b132950596a330ae66f0",
   "total": 20,
-  "passed": 16,
-  "failed": 4,
-  "accuracy": 80.0,
-  "duration": 28.7,
+  "passed": 17,
+  "failed": 3,
+  "accuracy": 85.0,
+  "duration": 27.2,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -21,7 +21,7 @@
       "total": 3
     },
     "ranking": {
-      "passed": 0,
+      "passed": 1,
       "total": 3
     },
     "grouping": {
@@ -192,9 +192,9 @@
         ],
         "min_count": 3
       },
-      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
+      "response": "| Formula_ID   |   Cost_Per_Litre_GBP |\n|:-------------|---------------------:|\n| ECO-F-0054   |                 0.36 |\n| ECO-F-0480   |                 0.37 |\n| ECO-F-0468   |                 0.38 |",
       "match_type": "ranking",
-      "passed": false
+      "passed": true
     },
     {
       "id": "top5_cleaning",
@@ -260,7 +260,7 @@
         "Polyethylene Glycol": 2.66,
         "Polyvinylpyrrolidone": 2.56
       },
-      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|---------------------:|\n| Carboxymethyl Cellulose |              2.79613 |\n| Chitosan Derivative     |              2.76388 |\n| Modified Starch         |              2.71039 |\n| Polyacrylic Acid        |              2.63013 |\n| Polyethylene Glycol     |              2.65543 |\n| Polyvinylpyrrolidone    |              2.55828 |",
+      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|-------------------:|\n| Carboxymethyl Cellulose | 2.796133           |\n| Chitosan Derivative     | 2.763875           |\n| Modified Starch         | 2.710395           |\n| Polyacrylic Acid        | 2.630132           |\n| Polyethylene Glycol     | 2.655426           |\n| Polyvinylpyrrolidone    | 2.558283           |",
       "match_type": "keyword_all",
       "passed": true
     },
