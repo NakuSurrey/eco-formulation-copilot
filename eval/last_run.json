@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-09T06:36:46+00:00",
+  "timestamp": "2026-08-16T06:21:12+00:00",
   "model": "",
-  "commit": "52befba25f58c2d4a55d0df050507178bb9a5f64",
+  "commit": "25a9ea2ea07b3d29da94ccf8bcdd824cda074b2e",
   "total": 20,
-  "passed": 16,
-  "failed": 4,
-  "accuracy": 80.0,
-  "duration": 25.7,
+  "passed": 18,
+  "failed": 2,
+  "accuracy": 90.0,
+  "duration": 26.8,
   "by_category": {
     "counting": {
       "passed": 4,
@@ -21,7 +21,7 @@
       "total": 3
     },
     "ranking": {
-      "passed": 1,
+      "passed": 2,
       "total": 3
     },
     "grouping": {
@@ -29,7 +29,7 @@
       "total": 3
     },
     "lookup": {
-      "passed": 2,
+      "passed": 3,
       "total": 3
     }
   },
@@ -93,7 +93,7 @@
       "category": "aggregation",
       "question": "What is the minimum toxicity level in the dataset?",
       "expected": 0.14,
-      "response": "0.14",
+      "response": "The minimum toxicity level in the dataset is 0.14.",
       "match_type": "numeric",
       "passed": true
     },
@@ -192,9 +192,9 @@
         ],
         "min_count": 3
       },
-      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
+      "response": "| Formula_ID   |   Cost_Per_Litre_GBP |\n|:-------------|---------------------:|\n| ECO-F-0054   |                 0.36 |\n| ECO-F-0480   |                 0.37 |\n| ECO-F-0468   |                 0.38 |",
       "match_type": "ranking",
-      "passed": false
+      "passed": true
     },
     {
       "id": "top5_cleaning",
@@ -244,7 +244,7 @@
         "Protease": 72,
         "Cellulase": 72
       },
-      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72      |\n| Protease      | 72      |\n| Cellulase     | 72     |",
+      "response": "| Enzyme_Type   | count   |\n|:--------------|:--------|\n| Mannanase     | 105     |\n| No Enzyme     | 91      |\n| Lipase        | 88      |\n| Amylase       | 72     |\n| Protease      | 72      |\n| Cellulase     | 72      |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -260,7 +260,7 @@
         "Polyethylene Glycol": 2.66,
         "Polyvinylpyrrolidone": 2.56
       },
-      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|-------------------:|\n| Carboxymethyl Cellulose | 2.796133           |\n| Chitosan Derivative     | 2.763875           |\n| Modified Starch         | 2.710395           |\n| Polyacrylic Acid        | 2.630132           |\n| Polyethylene Glycol     | 2.655426           |\n| Polyvinylpyrrolidone    | 2.558283           |",
+      "response": "| Polymer_Type | Cost_Per_Litre_GBP |\n|:------------------------|---------------------:|\n| Carboxymethyl Cellulose |              2.79613 |\n| Chitosan Derivative     |              2.76388 |\n| Modified Starch         |              2.71039 |\n| Polyacrylic Acid        |              2.63013 |\n| Polyethylene Glycol     |              2.65543 |\n| Polyvinylpyrrolidone    |              2.55828 |",
       "match_type": "keyword_all",
       "passed": true
     },
@@ -269,9 +269,9 @@
       "category": "lookup",
       "question": "What is the cost per litre of formula ECO-F-0012?",
       "expected": 1.13,
-      "response": "I couldn't process that query. Please try rephrasing your chemical parameters. (Detail: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM ou)",
+      "response": "1.13 £",
       "match_type": "numeric",
-      "passed": false
+      "passed": true
     },
     {
       "id": "lookup_surfactant_0001",
